@@ -3,7 +3,7 @@ name: read
 description: >
   Reverse of `write`: decomposes an existing, already-written document into its primary claim,
   secondary claims (one per section), and evidence sentences, then checks that structure against
-  the matching bara-blocks catalog type. Use this on a finished document — a README, design doc,
+  the matching bara-blocks catalog starter. Use this on a finished document — a README, design doc,
   PR description, essay — to audit whether its claims are actually supported, or to find gaps in
   the bara-blocks catalog itself. What school calls reading comprehension, applied on purpose.
 ---
@@ -25,8 +25,8 @@ Every document has a claim structure whether or not it was written with bara-blo
 
 Decomposing this first, then comparing it to the catalog, answers two different questions at
 once: is this particular document actually well-supported (does the evidence hold up its
-claims)? And does the catalog's type structure cover real writing (what did this document need
-that no type names, and what did a listed block never get used for)?
+claims)? And does the catalog's starter structure cover real writing (what did this document
+need that no starter names, and what did a listed block never get used for)?
 
 ## Steps
 
@@ -47,20 +47,21 @@ that no type names, and what did a listed block never get used for)?
    would change a skeptical reader's mind, the secondary claim is asserted, not supported — say
    so; that's a finding about the document, not something to paper over.
 
-5. **Find the closest domain and type in the catalog**, the same way `write`'s steps 1-2 would if
-   you were about to draft this document from scratch: read the domain's `README.md`, then the
-   specific type's `README.md`. Don't force a type that's a poor fit — if two are close, or none
-   are, say so (step 7 covers this).
+5. **Find the closest domain and starter in the catalog**, the same way `write`'s steps 1-2
+   would if you were about to draft this document from scratch: read the domain's `README.md`,
+   then the specific starter's `README.md`. Don't force a starter that's a poor fit — if two are
+   close, or none are, say so (step 7 covers this).
 
-6. **Compare the secondary claims against the catalog, not just that type's own list.** The
-   type's list is a starting point, not a fence — before calling something unmatched, also check
-   the domain's shared glossary (`blocks/README.md`), other types' blocks, and — for
+6. **Compare the secondary claims against the catalog, not just that starter's own list.** The
+   starter's list is a starting point, not a fence — before calling something unmatched, also
+   check the domain's shared glossary (`blocks/README.md`), other starters' blocks, and — for
    `software/explaining/` — `software/designing/`'s diagram blocks.
-   - **Blocks the type lists that this document skips** — ask why. A settled reference doc
+   - **Blocks the starter lists that this document skips** — ask why. A settled reference doc
      skipping Alternatives Considered is a different finding than a persuasive essay skipping a
      counterargument; name which it looks like.
    - **Secondary claims that match a block that exists elsewhere in the catalog but isn't linked
-     from this type** — name it as a linking gap in the type's own page, not a document defect.
+     from this starter** — name it as a linking gap in the starter's own page, not a document
+     defect.
    - **Secondary claims that map to no block anywhere in the catalog** — celebrate this, don't
      flag it as a shortfall. It usually means the author was thinking clearly about something
      specific to this document, not that the document or the catalog is missing something. Name

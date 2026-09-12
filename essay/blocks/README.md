@@ -2,8 +2,8 @@
 
 > A block is an atomic building block an essay is assembled from — a
 > paragraph-or-smaller unit with one job. These are the blocks used by more than one essay
-> type; a block used by only one type lives with that type instead, at
-> `types/<type>/blocks/`.
+> starter; a block used by only one starter lives with that starter instead, at
+> `starters/<starter>/blocks/`.
 
 ## Opening
 

@@ -35,7 +35,7 @@ No Claude Code? The docs stand on their own — start with the domains below.
 
 ## Domains
 
-- **[`essay/`](./essay/)** — the essay types taught in school (narrative, expository, persuasive,
+- **[`essay/`](./essay/)** — the essay starters taught in school (narrative, expository, persuasive,
   compare-contrast, …)
 - **[`software/`](./software/)** — the structures for both designing and explaining software
 

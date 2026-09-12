@@ -2,8 +2,8 @@
 
 > A block is the smallest thing you draw a box or arrow for — a person, a
 > system, a container, a component, a relationship between them. These are the blocks used by
-> more than one diagram type; a block used by only one type lives with that type instead, at
-> `types/<type>/blocks/`.
+> more than one diagram starter; a block used by only one starter lives with that starter
+> instead, at `starters/<starter>/blocks/`.
 
 ## Static blocks
 

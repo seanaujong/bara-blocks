@@ -6,26 +6,26 @@
 > (Component) — plus how a specific scenario plays out at runtime (Dynamic) and where it actually
 > runs (Deployment).
 
-## Types
+## Starters
 
 In order of zoom, widest first:
 
-- **[System Context](./types/context/README.md)** — the system as one box, its users, and the
+- **[System Context](./starters/context/README.md)** — the system as one box, its users, and the
   other systems it talks to.
-- **[Container](./types/container/README.md)** — the applications and data stores the system is
+- **[Container](./starters/container/README.md)** — the applications and data stores the system is
   made of; what actually gets deployed.
-- **[Component](./types/component/README.md)** — the modules inside one container and how
+- **[Component](./starters/component/README.md)** — the modules inside one container and how
   they're used and wired together.
-- **[Dynamic](./types/dynamic/README.md)** — how those blocks collaborate at runtime for one
+- **[Dynamic](./starters/dynamic/README.md)** — how those blocks collaborate at runtime for one
   scenario.
-- **[Deployment](./types/deployment/README.md)** — where those containers actually run, in a
+- **[Deployment](./starters/deployment/README.md)** — where those containers actually run, in a
   given environment.
 
 ## Blocks
 
 **[blocks/](./blocks/README.md)** is the shared glossary — Person, Software System,
 Container, Component, Relationship, Boundary — each described once here rather than re-explained
-on every type's page.
+on every starter's page.
 
 ## Further reading
 
