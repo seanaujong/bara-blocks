@@ -1,5 +1,5 @@
 ---
-name: write-with-bara-blocks
+name: write
 description: >
   Dispatches into the bara-blocks catalog of writing building blocks (domain -> type ->
   components) before drafting or restructuring any substantive document meant to be read
