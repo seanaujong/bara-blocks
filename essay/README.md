@@ -2,44 +2,28 @@
 
 > **At a glance.** School teaches a small, stable set of essay types, and each one decomposes
 > into a small, stable set of components — a thesis, a hook, a counterargument, a resolution.
-> This directory makes that decomposition **data**, not just prose: `data/` is the source of
-> truth, `docs/` is generated from it, and the shape is deliberately structured enough for a
-> future tool (a drag-and-drop essay builder) to consume directly, not just for a human to read.
+> The point of writing it down this way isn't to publish a taxonomy — it's so that, faced with a
+> piece of writing, you can name what you're actually trying to do and see which components are
+> likely to help. Every file here is plain Markdown, hand-edited directly — no schema, no
+> generator. Edit a file when you learn something that changes it.
 
-Not sure where to start? **[Which Essay Type Do I Need?](./docs/routing.md)** answers that in one
-or two questions and links straight to the type that fits.
+Not sure where to start? **[Which Essay Type Do I Need?](./routing.md)** answers that in one or
+two questions and links straight to the type that fits.
 
-## Structure
+## Essay types
 
-- **`schema/`** — the JSON Schema for a [component](./schema/component.schema.json), an
-  [essay type](./schema/essay-type.schema.json), and the [routing](./schema/routing.schema.json)
-  decision tree. Read these first if you're building against this data programmatically.
-- **`data/`** — the source of truth. [`components.json`](./data/components.json) is the shared
-  vocabulary of atomic building blocks; [`types/`](./data/types/) has one file per essay type,
-  each an ordered list of component references (required or optional, with a type-specific note
-  where the component's job narrows); [`routing.json`](./data/routing.json) is the "which type do
-  I need" decision tree.
-- **`docs/`** — generated Markdown, human-readable. **Never hand-edit a file here** — edit the
-  JSON in `data/` and run `npm run generate`. [`scripts/check-docs.mjs`](./scripts/check-docs.mjs)
-  fails if `docs/` ever drifts from `data/`; run it in CI.
-- **`scripts/`** — the generator (`generate-docs.mjs`), the drift guard (`check-docs.mjs`), and
-  the shared rendering logic (`lib.mjs`) both of them call.
+- **[Narrative](./narrative.md)** — tells a true story from experience, building to a point.
+- **[Descriptive](./descriptive.md)** — makes the reader experience a subject through sensory detail.
+- **[Expository](./expository.md)** — explains or informs, staying neutral.
+  - **[Compare and Contrast](./compare-contrast.md)** — how two things are alike and different.
+  - **[Cause and Effect](./cause-effect.md)** — why something happened, or what it caused.
+  - **[Process / How-To](./process.md)** — walks through doing something, step by step.
+  - **[Definition](./definition.md)** — establishes what a term actually means.
+- **[Persuasive / Argumentative](./persuasive.md)** — argues for a position, or moves the reader to act.
+- **[Literary Analysis](./literary-analysis.md)** — argues for an interpretation of a text.
 
-## Why data, not just prose
+## Components
 
-A component composes into more than one essay type (a thesis statement shows up in expository,
-persuasive, compare-contrast, and literary-analysis essays, with a different note each time on
-what makes a valid one). Modeling that as references from an essay type into a shared component
-table — rather than re-describing "thesis statement" nine times — is what makes the same data
-usable by a generator, a lint rule, or eventually a drag-and-drop UI that assembles an essay
-outline from the pieces, not just by a reader scrolling a doc.
-
-## Regenerating docs
-
-```
-npm run generate     # data/*.json -> docs/*.md
-npm run check-docs   # fails if docs/ doesn't match data/ (CI guard)
-```
-
-No dependencies — both scripts are plain Node (`node:fs`, `node:path`), so `npm install` isn't
-required to run them.
+**[components.md](./components.md)** is the shared glossary — a thesis statement, a hook, a
+counterargument, and so on each show up across more than one essay type above, described once
+here rather than re-explained on every page.
