@@ -17,14 +17,15 @@ Bara Blocks is a Claude Code plugin — add the marketplace and install, no clon
 /plugin install bara-blocks@bara-blocks
 ```
 
-Invocation is manual — run `/write` (or ask for it by name) before drafting or restructuring a
-substantive document: a README, design doc, PR description, developer guide, essay. Run `/read`
-on an already-written document to decompose it into its primary claim, secondary claims, and
-evidence, and check that structure against the catalog.
+Run `/write` (or ask for it by name) before drafting or restructuring a substantive document: a
+README, design doc, PR description, developer guide, essay. Run `/read` on an already-written
+document to decompose it into its primary claim, secondary claims, and evidence, and check that
+structure against the catalog. Claude Code may also reach for either on its own when a task
+clearly calls for it, but don't count on that alone.
 
-**Want Claude Code to reach for it on its own, without asking each time?** Tell it once. Add a
-note to your memory (or `CLAUDE.md`) that states this as a standing preference, not a maybe —
-something like:
+**Want Claude Code to reach for one more consistently, without asking each time?** Tell it once.
+Add a note to your memory (or `CLAUDE.md`) that states this as a standing preference, not a
+maybe — something like:
 
 > I prefer bara-blocks for any substantive document I ask you to write — a README, design doc,
 > PR description, developer guide, or essay. Read its catalog and follow its structure before

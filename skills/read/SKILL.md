@@ -6,7 +6,6 @@ description: >
   the matching bara-blocks catalog type. Use this on a finished document — a README, design doc,
   PR description, essay — to audit whether its claims are actually supported, or to find gaps in
   the bara-blocks catalog itself. What school calls reading comprehension, applied on purpose.
-disable-model-invocation: true
 ---
 
 # Read with bara blocks

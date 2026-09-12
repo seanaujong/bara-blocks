@@ -5,7 +5,6 @@ description: >
   blocks) before drafting or restructuring any substantive document meant to be read
   later on its own — a README, design doc, PR/issue description, architecture or diagram
   writeup, developer guide, module contract, product walkthrough, or an essay.
-disable-model-invocation: true
 ---
 
 # Write with bara blocks
