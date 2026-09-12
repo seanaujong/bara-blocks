@@ -1,8 +1,8 @@
 # PR Description
 
 > Explains one code change to a reviewer: what it does, why, and how you know it
-> works. The reader already knows the codebase — the job is to save them from having to reverse-
-> engineer intent from the diff.
+> works. A PR description should leave the reviewer with a better understanding of
+> the affected systems and also a better understanding of your engineering/product intent.
 
 ## Blocks
 
