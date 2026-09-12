@@ -18,7 +18,9 @@ Bara Blocks is a Claude Code plugin — add the marketplace and install, no clon
 ```
 
 Invocation is manual — run `/write` (or ask for it by name) before drafting or restructuring a
-substantive document: a README, design doc, PR description, developer guide, essay.
+substantive document: a README, design doc, PR description, developer guide, essay. Run `/read`
+on an already-written document to decompose it into its primary claim, secondary claims, and
+evidence, and check that structure against the catalog.
 
 **Want Claude Code to reach for it on its own, without asking each time?** Tell it once. Add a
 note to your memory (or `CLAUDE.md`) that states this as a standing preference, not a maybe —
