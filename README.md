@@ -12,4 +12,4 @@ I've also discovered building blocks for designing and explaining my code.
 
 - **[`essay/`](./essay/)** — the essay types taught in school (narrative, expository, persuasive,
   compare-contrast, …)
-- **`software/`** — the structures for both designing and explaining software
+- **[`software/`](./software/)** — the structures for both designing and explaining software
