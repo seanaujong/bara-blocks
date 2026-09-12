@@ -56,14 +56,18 @@ that no type names, and what did a listed block never get used for)?
    - **Blocks the type lists that this document skips** — ask why. A settled reference doc
      skipping Alternatives Considered is a different finding than a persuasive essay skipping a
      counterargument; name which it looks like.
-   - **Secondary claims that map to no listed block** — this is catalog-growth signal, not
-     document error. Name the section plainly (an enforcement matrix, an extension guide, a
-     change-trigger list, …). If the same unnamed shape recurs across more than one decomposed
-     document, it's a candidate for a new block or type — mention it, don't add it unasked.
+   - **Secondary claims that map to no listed block** — celebrate this, don't flag it as a
+     shortfall. It usually means the author was thinking clearly about something specific to
+     this document, not that the document or the catalog is missing something. Name the section
+     plainly (an enforcement matrix, a lesson-learned aside, …); only treat it as a candidate new
+     block once the same shape recurs, unprompted, in an unrelated document — see
+     [why the catalog isn't exhaustive](../../README.md#the-catalog-isnt-exhaustive). Most novel
+     sections should just stay novel.
 
 7. **If nothing in the catalog is a plausible match, say so.** Report the primary/secondary/
-   evidence decomposition on its own — a document falling outside the catalog is useful signal
-   for growing it later, not a failure of this skill (mirrors `write`'s own step 6).
+   evidence decomposition on its own — a document falling outside the catalog entirely is a
+   stronger version of the same good sign as step 6's second bullet, not a failure of this skill
+   or a hole to patch (mirrors `write`'s own step 6).
 
 ## Reporting the result
 

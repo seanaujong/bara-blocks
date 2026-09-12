@@ -59,7 +59,9 @@ document's shape:
    Component, or Dynamic diagram often makes a structural claim visible in a way prose
    can't. If that visual is a diagram going into the document as ASCII art, use the `ascii-diagram` skill.
 
-6. **If nothing fits, say so.** If the document is a genuinely novel shape the catalog
-   doesn't cover, don't force it into the nearest type. Draft it on its own merits and
-   mention that it fell outside the catalog — that's useful signal for growing the catalog
-   later, not a failure of this skill.
+6. **If nothing fits, say so — and don't force it.** A document needing something the catalog
+   doesn't name is usually a sign the author was thinking clearly about their specific case, not
+   a defect to fix. Draft it on its own merits and name what it needed instead of the nearest
+   type. Resist growing the catalog to absorb it on the spot — see
+   [why the catalog isn't exhaustive](../../README.md#the-catalog-isnt-exhaustive). Most novel
+   shapes should just stay novel.

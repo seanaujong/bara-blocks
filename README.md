@@ -38,3 +38,12 @@ No Claude Code? The docs stand on their own — start with the domains below.
 - **[`essay/`](./essay/)** — the essay types taught in school (narrative, expository, persuasive,
   compare-contrast, …)
 - **[`software/`](./software/)** — the structures for both designing and explaining software
+
+## The catalog isn't exhaustive
+
+These templates name the blocks that recur often enough to be worth naming — they're not a
+checklist a document has to fully satisfy. A document that needs a section none of these blocks
+name is usually the author thinking clearly about something specific to their case, not a defect
+in the document or a hole in the catalog. Name what it needed and move on with pride, don't rush
+to patch the catalog around it — promote it to a new block only once the same shape shows up
+again, unprompted, in an unrelated document. Most novel sections should just stay novel.
