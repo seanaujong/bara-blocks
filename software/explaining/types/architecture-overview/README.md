@@ -1,30 +1,39 @@
 # Architecture Overview
 
-> States the author's intended shape for a project, kept current as that vision evolves — not a
-> problem being solved today, but the structure a reader should hold in their head before
-> touching any layer or module, and the contract the code is expected to match. The reader is
-> orienting themselves against what the system is meant to be, not deciding whether to approve a
-> proposal — that's what tells this type apart from a [Design Doc](../design-doc/README.md),
-> which argues for a not-yet-built option to a not-yet-solved problem.
+> Lays out the core vision of a project. This is the first document you should read to
+> understand how the author wants you to use/contribute to the project. If you
+> are trying to suggest a change/improvement, try writing a [Design Doc](../design-doc/README.md).
 
 ## Blocks
 
 ### [Summary](../../blocks/opening/summary.md)
 
-**For this type:** usually a bulleted "at a glance" list rather than a paragraph — a reader
-scans this before reading linearly, and each bullet should stand on its own as a claim.
+**For this type:** format varies — some open with a compact bulleted "at a glance" list, others
+fuse the same claims into one dense opening paragraph before the detail. Either way, a skimming
+reader should be able to extract the core claims without reading past this block.
 
+> Bulleted:
 > - Two halves: a structure (what may depend on what) and the invariants that structure protects.
 > - Data flows one direction: adapter → app → pure modules → output. No upward references.
+>
+> Fused into a paragraph, same claims:
+> The system is two halves — a structure (what may depend on what) and the invariants that
+> structure protects — with data flowing one direction, adapter → app → pure modules → output,
+> and no upward references.
 
 ### [Component](../../../designing/types/component/README.md) (or [Container](../../../designing/types/container/README.md))
 
-**For this type:** the load-bearing visual, not an optional add-on — every layer or module named
-in prose should trace back to a box here. Pick Component for a single-process system decomposed
-into modules; pick Container if the system spans several deployable pieces.
+**For this type:** every layer or module named in prose should trace back to a box here.
+Pick Component for a single-process system decomposed into modules;
+pick Container if the system spans several deployable pieces.
 
 > See [designing/types/component](../../../designing/types/component/README.md) for the block
 > vocabulary this diagram is built from — Component, Container, Relationship.
+
+### [Layer Responsibilities](./blocks/layer-responsibilities.md)
+
+> "The Checkout API is the only code that touches the network... It doesn't decide whether an
+> unpaid fine blocks checkout; that's the caller's job."
 
 ### [Layer Contracts](./blocks/layer-contracts.md)
 
@@ -33,12 +42,18 @@ into modules; pick Container if the system spans several deployable pieces.
 
 ### [Enforcement Matrix](./blocks/enforcement-matrix.md)
 
-> "A patron ID that doesn't exist returns a zero balance — held by a test, not a type."
+> "A patron ID that doesn't exist returns a zero balance — held by a test or type"
 
 ### [Extension Guide](./blocks/extension-guide.md)
 
 > "New fine type: add a variant to `FineKind`, handle it in `computeBalance`. The receipt
 > formatter is unchanged."
+
+### [Discipline](./blocks/discipline.md)
+
+> "No upward imports. Pure functions over immutable data. The core never branches on which
+> policy it's running under. If a proposal would break any of these, it's the proposal that's
+> wrong, not the rules."
 
 ### [Change Triggers](./blocks/change-triggers.md)
 
