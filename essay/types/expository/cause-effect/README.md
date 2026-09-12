@@ -1,6 +1,6 @@
 # Cause and Effect Essay
 
-> **At a glance.** Explains why something happened, or what resulted from it, by demonstrating the causal mechanism rather than asserting a link.
+> Explains why something happened, or what resulted from it, by demonstrating the causal mechanism rather than asserting a link.
 
 A subtype of [Expository Essay](../README.md).
 

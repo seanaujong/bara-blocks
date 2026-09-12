@@ -1,6 +1,6 @@
 # PR Description
 
-> **At a glance.** Explains one code change to a reviewer: what it does, why, and how you know it
+> Explains one code change to a reviewer: what it does, why, and how you know it
 > works. The reader already knows the codebase — the job is to save them from having to reverse-
 > engineer intent from the diff.
 

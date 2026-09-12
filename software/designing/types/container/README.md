@@ -1,6 +1,6 @@
 # Container
 
-> **At a glance.** Zooms into the one system from a [Context](../context/README.md) diagram to
+> Zooms into the one system from a [Context](../context/README.md) diagram to
 > show the applications and data stores it's actually made of — the answer to "what gets
 > deployed?" Still no code-level detail, but technology choices show up here for the first time.
 

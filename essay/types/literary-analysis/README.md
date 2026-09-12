@@ -1,6 +1,6 @@
 # Literary Analysis Essay
 
-> **At a glance.** Argues for an interpretation of a text, grounded in the text's own words rather than a summary of what happens in it.
+> Argues for an interpretation of a text, grounded in the text's own words rather than a summary of what happens in it.
 
 ## Blocks
 

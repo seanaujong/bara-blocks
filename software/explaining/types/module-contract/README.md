@@ -1,6 +1,6 @@
 # Module Contract
 
-> **At a glance.** Written when you deliberately design a module — meant to be used from here on
+> Written when you deliberately design a module — meant to be used from here on
 > out, alongside the code, not after the fact. States the one job the module owns, its public
 > surface, and what must (or must not) hold for correct use — so a later caller has something to
 > check their usage against, instead of having to reconstruct it from behavior (see

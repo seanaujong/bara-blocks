@@ -1,6 +1,6 @@
 # Design Doc
 
-> **At a glance.** Proposes a solution before it's built: what's wrong, what options exist, which
+> Proposes a solution before it's built: what's wrong, what options exist, which
 > one wins and why. The reader is deciding whether to approve the approach, not reviewing finished
 > code — so the point isn't just "an alternative existed," but why each one wins or loses on the
 > tradeoffs that actually matter here.

@@ -1,6 +1,6 @@
 # Narrative Essay
 
-> **At a glance.** Tells a true story from the writer's experience that arrives at a point, not just an account of what happened.
+> Tells a true story from the writer's experience that arrives at a point, not just an account of what happened.
 
 ## Blocks
 

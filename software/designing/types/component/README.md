@@ -1,6 +1,6 @@
 # Component
 
-> **At a glance.** Zooms into one container from a [Container](../container/README.md) diagram to
+> Zooms into one container from a [Container](../container/README.md) diagram to
 > show the components it's built from — the answer to "how are the modules inside this thing used
 > and wired together?" C4 recommends drawing this only where it adds value, and only for
 > containers whose internal structure isn't obvious from the code.

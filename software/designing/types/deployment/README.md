@@ -1,6 +1,6 @@
 # Deployment
 
-> **At a glance.** Shows where container instances from a [Container](../container/README.md)
+> Shows where container instances from a [Container](../container/README.md)
 > diagram actually run, in one specific deployment environment (production, staging) — the answer
 > to "where does this live, and what infrastructure sits around it?"
 

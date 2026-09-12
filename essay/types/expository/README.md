@@ -1,6 +1,6 @@
 # Expository Essay
 
-> **At a glance.** Explains or informs on a topic using facts and examples while staying neutral — the writer's opinion isn't the point.
+> Explains or informs on a topic using facts and examples while staying neutral — the writer's opinion isn't the point.
 
 ## Blocks
 

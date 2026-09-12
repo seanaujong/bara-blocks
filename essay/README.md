@@ -1,6 +1,6 @@
 # Essay Building Blocks
 
-> **At a glance.** School teaches a small, stable set of essay types, and each one decomposes
+> School teaches a small, stable set of essay types, and each one decomposes
 > into a small, stable set of blocks — a thesis, a hook, a counterargument, a resolution.
 > The point of writing it down this way isn't to publish a taxonomy — it's so that, faced with a
 > piece of writing, you can name what you're actually trying to do and see which blocks are

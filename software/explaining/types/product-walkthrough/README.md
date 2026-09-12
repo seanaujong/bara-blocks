@@ -1,6 +1,6 @@
 # Product Walkthrough
 
-> **At a glance.** Walks a customer through using a product or feature, in their own terms — what
+> Walks a customer through using a product or feature, in their own terms — what
 > they click, what they see, why it's better than before. No implementation detail; the reader is
 > a user, not a developer.
 

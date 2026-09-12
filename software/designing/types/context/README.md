@@ -1,6 +1,6 @@
 # System Context
 
-> **At a glance.** The widest-zoom C4 diagram: your system as one box, surrounded by the people
+> The widest-zoom C4 diagram: your system as one box, surrounded by the people
 > who use it and the other systems it talks to. No internals, no technology choices — this is the
 > "what is this thing, at all" view.
 

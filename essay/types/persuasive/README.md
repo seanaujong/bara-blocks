@@ -1,6 +1,6 @@
 # Persuasive / Argumentative Essay
 
-> **At a glance.** Takes a position on a debatable issue and moves the reader toward agreeing with it or acting on it.
+> Takes a position on a debatable issue and moves the reader toward agreeing with it or acting on it.
 
 ## Blocks
 

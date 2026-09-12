@@ -1,6 +1,6 @@
 # Blocks
 
-> **At a glance.** A block is an atomic building block a piece of writing about software is
+> A block is an atomic building block a piece of writing about software is
 > assembled from. These are the blocks used by more than one type; a block used by only
 > one type lives with that type instead, at `types/<type>/blocks/`.
 

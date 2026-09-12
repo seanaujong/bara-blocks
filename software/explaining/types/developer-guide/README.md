@@ -1,6 +1,6 @@
 # Developer Guide
 
-> **At a glance.** Walks a developer through using a tool, API, or library — what to install, what
+> Walks a developer through using a tool, API, or library — what to install, what
 > to call, what comes back. The reader is a developer, so implementation detail and exact code are
 > the point, not something to abstract away.
 

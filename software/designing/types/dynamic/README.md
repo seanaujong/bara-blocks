@@ -1,6 +1,6 @@
 # Dynamic
 
-> **At a glance.** Shows how the blocks from a static diagram (Container or Component)
+> Shows how the blocks from a static diagram (Container or Component)
 > collaborate at runtime to carry out one specific scenario — a user story, a feature, a use
 > case. This is C4's answer to a sequence diagram, minus the strict lifeline layout. Use it
 > sparingly: only for a flow that's genuinely complicated or that recurs often enough to be worth

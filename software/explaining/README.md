@@ -1,6 +1,6 @@
 # Explaining Software
 
-> **At a glance.** A small, stable set of document types covers most writing about software: how
+> A small, stable set of document types covers most writing about software: how
 > a customer uses it, how a developer uses it, why a code change was made, and why a not-yet-built
 > approach should be approved. Each decomposes into blocks — a problem statement, a step, a
 > before/after pair, a decision — the same way an essay decomposes into a thesis and evidence.

@@ -40,7 +40,7 @@ document's shape:
    - `software/explaining/README.md`
 
 2. **Read the specific type's `README.md`.** Every type file follows the same shape: an
-   "At a glance" line naming the reader and the job, an ordered list of blocks in the
+   opening blockquote naming the reader and the job, an ordered list of blocks in the
    order they typically appear with a short worked example, and a closing "Pitfalls"
    list. This is the actual structure to draft against — don't skim it, read it.
 

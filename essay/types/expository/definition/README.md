@@ -1,6 +1,6 @@
 # Definition Essay
 
-> **At a glance.** Establishes what a term means beyond its dictionary line, especially for terms that are contested, abstract, or narrower/wider than common usage assumes.
+> Establishes what a term means beyond its dictionary line, especially for terms that are contested, abstract, or narrower/wider than common usage assumes.
 
 A subtype of [Expository Essay](../README.md).
 

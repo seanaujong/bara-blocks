@@ -1,6 +1,6 @@
 # Descriptive Essay
 
-> **At a glance.** Makes the reader experience a person, place, or thing rather than just being told about it.
+> Makes the reader experience a person, place, or thing rather than just being told about it.
 
 ## Blocks
 

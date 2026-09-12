@@ -1,6 +1,6 @@
 # Opening
 
-> **At a glance.** [Summary](./summary.md), [Problem Statement](./problem-statement.md), and
+> [Summary](./summary.md), [Problem Statement](./problem-statement.md), and
 > [Decision and Rationale](./decision-and-rationale.md) are described separately because each
 > answers a different question — what happened, what was wrong, why this fix — but a document
 > doesn't have to give each its own section. They often fuse into a single opening

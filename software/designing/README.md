@@ -1,6 +1,6 @@
 # Designing Software
 
-> **At a glance.** Software architecture drawn at the right zoom level for the question you're
+> Software architecture drawn at the right zoom level for the question you're
 > actually asking, using the [C4 model](https://c4model.com/): what is this system and who uses
 > it (Context), what gets deployed (Container), how are its modules used and wired together
 > (Component) — plus how a specific scenario plays out at runtime (Dynamic) and where it actually

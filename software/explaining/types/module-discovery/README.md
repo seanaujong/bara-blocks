@@ -1,6 +1,6 @@
 # Module Discovery
 
-> **At a glance.** Reconstructs a module's intended usage after the fact, from a module that
+> Reconstructs a module's intended usage after the fact, from a module that
 > already exists and was never given a [Module Contract](../module-contract/README.md) — common
 > for vibe-coded code, where design emerged rather than being decided up front. Reads the module's
 > own interface and its actual call sites as evidence, then decides what to commit to going
