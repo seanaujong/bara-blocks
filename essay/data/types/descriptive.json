@@ -1,0 +1,21 @@
+{
+  "id": "descriptive",
+  "name": "Descriptive Essay",
+  "purpose": "Makes the reader experience a person, place, or thing rather than just being told about it.",
+  "components": [
+    { "ref": "dominant-impression", "required": true },
+    { "ref": "sensory-detail", "required": true },
+    { "ref": "figurative-language", "required": false },
+    { "ref": "conclusion", "required": true, "note": "Ties back to the dominant impression rather than summarizing facts about the subject." }
+  ],
+  "organizational_patterns": [
+    { "id": "spatial", "name": "Spatial", "description": "Moves through the subject by physical layout (near to far, top to bottom, room to room)." },
+    { "id": "chronological", "name": "Chronological", "description": "Describes a subject as it changes or is experienced over time (a storm passing, a meal being eaten)." },
+    { "id": "order-of-importance", "name": "Order of Importance", "description": "Orders details from least to most (or most to least) central to the dominant impression." }
+  ],
+  "pitfalls": [
+    "Details listed without a unifying impression — reads as a list, not a picture.",
+    "No organizing principle, so the reader can't reconstruct the whole from the parts.",
+    "Figurative language that describes the writer's cleverness more than the subject."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "compare-contrast",
+  "name": "Compare and Contrast Essay",
+  "purpose": "Explains two subjects by showing how they resemble and differ from each other on the same points.",
+  "subtype_of": "expository",
+  "components": [
+    { "ref": "thesis-statement", "required": true, "note": "Names both subjects and the basis of comparison, not just 'X and Y are similar and different.'" },
+    { "ref": "comparison-points", "required": true },
+    { "ref": "transition", "required": true, "note": "Carries extra weight here — it's what signals the shift between subjects or points (similarly, in contrast, whereas)." },
+    { "ref": "conclusion", "required": true, "note": "States why the comparison matters, not just a recap of what was compared." }
+  ],
+  "organizational_patterns": [
+    { "id": "block", "name": "Block (Subject-by-Subject)", "description": "Covers all points for subject A, then all the same points for subject B." },
+    { "id": "point-by-point", "name": "Point-by-Point", "description": "Alternates A and B within each point of comparison before moving to the next point." }
+  ],
+  "pitfalls": [
+    "Comparing on inconsistent points across the two subjects (apples to oranges within the essay itself).",
+    "Ending without saying why the comparison is worth having made.",
+    "Block structure so long the reader has forgotten subject A's details by the time subject B arrives — point-by-point usually reads better past a couple of comparison points."
+  ]
+}

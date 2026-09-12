@@ -1,0 +1,9 @@
+{
+  "name": "@writing-blocks/essay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-docs.mjs",
+    "check-docs": "node scripts/check-docs.mjs"
+  }
+}

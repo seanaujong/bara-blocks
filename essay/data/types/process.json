@@ -1,0 +1,18 @@
+{
+  "id": "process",
+  "name": "Process / How-To Essay",
+  "purpose": "Lets the reader actually perform a procedure by walking through it in the order it must happen.",
+  "subtype_of": "expository",
+  "components": [
+    { "ref": "hook", "required": false },
+    { "ref": "materials-or-prerequisites", "required": false, "note": "Omit when the process needs nothing beyond what the reader already has." },
+    { "ref": "sequential-steps", "required": true },
+    { "ref": "tips-and-warnings", "required": false },
+    { "ref": "conclusion", "required": true, "note": "States the result achieved, not just 'you're done.'" }
+  ],
+  "pitfalls": [
+    "A skipped step the reader can't recover from without outside knowledge.",
+    "Steps given out of true dependency order.",
+    "A warning placed after the step it would have prevented a mistake on."
+  ]
+}

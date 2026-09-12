@@ -1,0 +1,191 @@
+[
+  {
+    "id": "hook",
+    "name": "Hook",
+    "purpose": "Earns the first few seconds of the reader's attention before the essay has proven it's worth reading.",
+    "placement": "opening",
+    "example": "\"The library's self-checkout machines process a book in four seconds. The librarian they replaced also asked how your week was going.\"",
+    "notes": "Optional wherever the opening component itself already does this job (dominant-impression in descriptive, baseline-definition in definition essays)."
+  },
+  {
+    "id": "orienting-details",
+    "name": "Orienting Details",
+    "purpose": "Gives the reader the who/what/when/where they need before the sequence of events can make sense.",
+    "placement": "opening",
+    "example": "\"The summer I turned twelve, my grandfather taught me to fillet a fish on the dock behind his house.\""
+  },
+  {
+    "id": "thesis-statement",
+    "name": "Thesis Statement",
+    "purpose": "States the essay's central claim up front so the reader knows, before reading further, what the whole essay resolves — the crux the rest of the essay answers.",
+    "placement": "opening",
+    "example": "\"The library's new self-checkout system cuts wait times but removes a point of human contact many patrons relied on.\"",
+    "notes": "What counts as a valid thesis shifts by type: a neutral topic claim in expository writing, an arguable position in persuasive writing, an interpretive claim in literary analysis. See each essay type's note on this component."
+  },
+  {
+    "id": "topic-sentence",
+    "name": "Topic Sentence",
+    "purpose": "States the one idea a body paragraph exists to support, so a reader can track the essay's argument paragraph by paragraph without reading every sentence.",
+    "placement": "body",
+    "example": "\"The first reason self-checkout saves time is that it removes the queue for a single staffed register.\""
+  },
+  {
+    "id": "evidence",
+    "name": "Evidence",
+    "purpose": "Backs a claim with something outside the writer's own say-so — a fact, statistic, example, or expert source — so the reader has a reason to believe it beyond the writer's word.",
+    "placement": "body",
+    "example": "\"Average checkout time dropped from 90 seconds to 12 seconds after the machines were installed (library annual report, 2025).\"",
+    "notes": "In expository writing this stays factual/neutral; in persuasive writing it directly supports a reason for the claim; in literary analysis this specializes into textual-evidence."
+  },
+  {
+    "id": "textual-evidence",
+    "name": "Textual Evidence",
+    "purpose": "Supports an interpretive claim about a text using the text's own words, so the interpretation is checkable against the source rather than asserted.",
+    "placement": "body",
+    "example": "\"'He could not remember when the house had last been quiet' signals the isolation the rest of the chapter develops.\""
+  },
+  {
+    "id": "close-reading",
+    "name": "Close Reading",
+    "purpose": "Explains how a piece of textual evidence actually supports the claim — the step that turns a quote into an argument instead of decoration.",
+    "placement": "body",
+    "example": "\"The word 'remember' implies the quiet is not new but has become invisible to him — which is the isolation the essay's thesis names.\""
+  },
+  {
+    "id": "transition",
+    "name": "Transition",
+    "purpose": "Signals the logical relationship between two ideas (sequence, contrast, cause) so the reader doesn't have to infer it.",
+    "placement": "any",
+    "example": "\"In contrast, the point-of-sale data tells a different story.\""
+  },
+  {
+    "id": "conclusion",
+    "name": "Conclusion",
+    "purpose": "Leaves the reader with why the essay mattered, not just a repeat of what it said.",
+    "placement": "closing",
+    "example": "\"Faster checkout is a real gain — but a library that measures only speed will miss what it's trading away.\"",
+    "notes": "A weak conclusion restates the thesis verbatim; a working one synthesizes or states significance."
+  },
+  {
+    "id": "plot-sequence",
+    "name": "Plot Sequence",
+    "purpose": "Carries the reader through what happened, in the order it happened, so the story is followable.",
+    "placement": "body",
+    "example": "\"He handed me the knife handle-first, then knelt beside me to show the angle.\""
+  },
+  {
+    "id": "conflict-and-climax",
+    "name": "Conflict and Climax",
+    "purpose": "Gives the story a stake worth reading for — something at risk — and the moment it comes to a head.",
+    "placement": "body",
+    "example": "\"The blade slipped and I dropped it — and for a second I was sure he'd send me back inside.\""
+  },
+  {
+    "id": "resolution",
+    "name": "Resolution",
+    "purpose": "Shows how the conflict actually ended, so the reader isn't left mid-scene.",
+    "placement": "body",
+    "example": "\"He picked the knife up, wiped it, and put it back in my hand. 'Again,' he said.\""
+  },
+  {
+    "id": "reflection",
+    "name": "Reflection",
+    "purpose": "States what the events meant to the writer — the 'so what' that turns a sequence of events into a story with a point.",
+    "placement": "closing",
+    "example": "\"I didn't learn to fillet a fish that day so much as learn what it looks like to be trusted with something sharp.\"",
+    "notes": "The component most narrative drafts skip, leaving a sequence of events with no stated point."
+  },
+  {
+    "id": "dominant-impression",
+    "name": "Dominant Impression",
+    "purpose": "Names the single overall feeling or idea every detail in the essay will serve, so the details add up to one picture instead of a list.",
+    "placement": "opening",
+    "example": "\"The workshop smelled like a place where things got fixed, not made.\""
+  },
+  {
+    "id": "sensory-detail",
+    "name": "Sensory Detail",
+    "purpose": "Gives the reader something to see, hear, smell, taste, or touch, so the description is experienced rather than told.",
+    "placement": "body",
+    "example": "\"Sawdust caught the light from the one high window and never seemed to fully settle.\""
+  },
+  {
+    "id": "figurative-language",
+    "name": "Figurative Language",
+    "purpose": "Uses comparison (simile, metaphor) to convey a quality that a literal description would only state.",
+    "placement": "body",
+    "example": "\"The vise sat at the bench's edge like a hand permanently closed.\""
+  },
+  {
+    "id": "counterargument",
+    "name": "Counterargument",
+    "purpose": "States the strongest version of the opposing view, so the essay's rebuttal actually earns the reader's agreement instead of dodging the hard case.",
+    "placement": "body",
+    "example": "\"Opponents point out that self-checkout eliminates jobs for the library's part-time staff.\"",
+    "notes": "A strawman counterargument (a weak version of the opposing case) is the most common failure of this component."
+  },
+  {
+    "id": "rebuttal",
+    "name": "Rebuttal",
+    "purpose": "Answers the counterargument directly, showing why the essay's claim survives it.",
+    "placement": "body",
+    "example": "\"But the same budget that funded the machines also funded two new community-programming positions — the jobs moved, they didn't disappear.\""
+  },
+  {
+    "id": "call-to-action",
+    "name": "Call to Action",
+    "purpose": "Tells the reader what to do with the position they've just been persuaded of.",
+    "placement": "closing",
+    "example": "\"Ask your branch what it did with the labor savings before you decide whether the tradeoff was worth it.\""
+  },
+  {
+    "id": "comparison-points",
+    "name": "Comparison Points",
+    "purpose": "States the same basis of comparison applied to each subject, so the comparison is apples-to-apples instead of a list of unrelated facts about each.",
+    "placement": "body",
+    "example": "\"On cost: self-checkout runs $0.02/transaction in maintenance; a staffed register runs $0.85 in wages.\""
+  },
+  {
+    "id": "causal-link",
+    "name": "Causal Link",
+    "purpose": "Shows the mechanism connecting a cause to its effect, so the claim is a demonstrated link rather than an assumed one.",
+    "placement": "body",
+    "example": "\"Shorter queues mean fewer patrons leave before checking out at all — that's the direct mechanism behind the circulation increase, not just correlation with the season.\"",
+    "notes": "The component most responsible for catching a correlation mistaken for causation."
+  },
+  {
+    "id": "materials-or-prerequisites",
+    "name": "Materials or Prerequisites",
+    "purpose": "Tells the reader what they need before starting, so they don't discover a missing requirement mid-process.",
+    "placement": "opening",
+    "example": "\"You'll need a library card and the branch's mobile app installed before your first self-checkout visit.\""
+  },
+  {
+    "id": "sequential-steps",
+    "name": "Sequential Steps",
+    "purpose": "Walks the reader through the process in the order it must be performed, so no step depends on one that hasn't happened yet.",
+    "placement": "body",
+    "example": "\"First, scan your card. Then scan each book's barcode. Finally, tap 'finish' before removing your books from the pad.\""
+  },
+  {
+    "id": "tips-and-warnings",
+    "name": "Tips and Warnings",
+    "purpose": "Flags the mistakes or edge cases a first-timer would otherwise hit and have to recover from.",
+    "placement": "body",
+    "example": "\"If the machine doesn't beep, the scan didn't register — check the screen before moving to the next book.\""
+  },
+  {
+    "id": "baseline-definition",
+    "name": "Baseline Definition",
+    "purpose": "Gives the reader a shared starting point for the term before the essay extends or complicates it.",
+    "placement": "opening",
+    "example": "\"A 'third place,' as sociologist Ray Oldenburg defined it, is a space that is neither home nor work.\""
+  },
+  {
+    "id": "extended-definition",
+    "name": "Extended Definition",
+    "purpose": "Fills out the baseline definition with what the term looks like in practice, what it isn't, and what it resembles, so the reader can recognize it beyond the dictionary line.",
+    "placement": "body",
+    "example": "\"A library is a third place; a self-checkout kiosk with no staff nearby to talk to is closer to a vending machine that happens to dispense books.\""
+  }
+]

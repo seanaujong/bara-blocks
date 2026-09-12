@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://writing-blocks/essay/schema/component.schema.json",
+  "title": "Component",
+  "description": "An atomic building block an essay is assembled from — a paragraph-or-smaller unit with one job (a hook, a thesis, a counterargument). Essay types compose components; they don't redefine them.",
+  "type": "object",
+  "required": ["id", "name", "purpose", "placement"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      "description": "Stable kebab-case identifier. Essay types reference components by this id — renaming it is a breaking change for every type that refs it."
+    },
+    "name": { "type": "string", "description": "Human-readable label." },
+    "purpose": {
+      "type": "string",
+      "description": "The problem this component solves for the reader, stated crux-first — why it needs to exist, not just what it contains."
+    },
+    "placement": {
+      "type": "string",
+      "enum": ["opening", "body", "closing", "any"],
+      "description": "Where in the essay this component typically lands."
+    },
+    "example": {
+      "type": "string",
+      "description": "One concrete instance a reader can pattern-match against."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Caveats or variants worth knowing (e.g. how this component's job shifts between essay types)."
+    }
+  }
+}
