@@ -26,9 +26,6 @@ above, described once here rather than re-explained on every page.
 
 ## Further reading
 
-The descriptions here are written for this repo rather than quoted from anywhere, but this is
-well-trodden pedagogical ground. For more depth or a second opinion on any type:
-
 - [Purdue OWL: General Essay Writing](https://owl.purdue.edu/owl/general_writing/index.html)
 - [ReadWriteThink](https://www.readwritethink.org/)
 - [Khan Academy: Reading & Writing](https://www.khanacademy.org/humanities/grammar)
