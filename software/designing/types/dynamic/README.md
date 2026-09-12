@@ -29,8 +29,5 @@ existing relationships.
 
 ## Pitfalls
 
-- Documenting every scenario — most flows are boring enough to skip; draw this only for the ones
-  that surprise a reader.
-- Introducing a block that doesn't already exist on a static diagram — that's a sign the static
-  diagram is missing something, not that this diagram gets to invent one.
-- Numbering that doesn't match the actual call order, which is worse than no diagram at all.
+- Documenting every scenario — you should only document the primary success case and
+  the edge cases that are needed to hold an invariant

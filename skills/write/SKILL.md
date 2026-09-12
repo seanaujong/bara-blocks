@@ -22,10 +22,11 @@ files fresh rather than relying on what's summarized below.
 ## Why dispatch instead of freestyling
 
 Every type file in this catalog already answers the three questions that actually decide a
-document's shape: who is this for, what pieces does a document like this typically need, and
-what does this kind of document commonly get wrong. Reading that
-before drafting is cheaper than reinventing structure and catches the same mistakes the
-catalog's own worked examples were written to avoid.
+document's shape:
+
+- who is this for?
+- what does the reader want to know?
+- which visual blocks best support the primary claim?
 
 ## Steps
 
@@ -35,10 +36,8 @@ catalog's own worked examples were written to avoid.
    `software/designing/`, the latter `software/explaining/`. Read that domain's own
    `README.md` first — it lists the current types and a one-line job for each:
    - `essay/README.md`
-   - `software/designing/README.md` (System Context, Container, Component, Dynamic,
-     Deployment — in order of zoom, widest first)
-   - `software/explaining/README.md` (Product Walkthrough, Developer Guide, PR Description,
-     Design Doc, Module Contract, Module Discovery)
+   - `software/designing/README.md`
+   - `software/explaining/README.md`
 
 2. **Read the specific type's `README.md`.** Every type file follows the same shape: an
    "At a glance" line naming the reader and the job, an ordered list of blocks in the
@@ -63,12 +62,7 @@ catalog's own worked examples were written to avoid.
    Skip this step only if nothing in the catalog would actually add that, not because
    picking one feels like extra work.
 
-6. **Check the draft against the type's Pitfalls list before calling it done.** These are
-   named because they're the failure mode a document of this shape drifts into by default
-   (e.g. a PR summary that restates the diff instead of the reason) — they're the fastest
-   self-review available.
-
-7. **If nothing fits, say so.** If the document is a genuinely novel shape the catalog
+6. **If nothing fits, say so.** If the document is a genuinely novel shape the catalog
    doesn't cover, don't force it into the nearest type. Draft it on its own merits and
    mention that it fell outside the catalog — that's useful signal for growing the catalog
    later, not a failure of this skill.

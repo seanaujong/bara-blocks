@@ -40,7 +40,5 @@ not to be worth the upkeep.
 
 ## Pitfalls
 
-- Drawing this for a container whose structure is already obvious from its file layout — the
-  diagram should earn its keep, not exist because a diagram exists for every other level.
 - Naming a component after a class instead of a responsibility — a component is a grouping, not
   one implementation class.
