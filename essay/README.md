@@ -8,15 +8,15 @@
 
 ## Essay types
 
-- **[Narrative](./narrative/README.md)** — tells a true story from experience, building to a point.
-- **[Descriptive](./descriptive/README.md)** — makes the reader experience a subject through sensory detail.
-- **[Expository](./expository/README.md)** — explains or informs, staying neutral.
-  - **[Compare and Contrast](./compare-contrast/README.md)** — how two things are alike and different.
-  - **[Cause and Effect](./cause-effect/README.md)** — why something happened, or what it caused.
-  - **[Process / How-To](./process/README.md)** — walks through doing something, step by step.
-  - **[Definition](./definition/README.md)** — establishes what a term actually means.
-- **[Persuasive / Argumentative](./persuasive/README.md)** — argues for a position, or moves the reader to act.
-- **[Literary Analysis](./literary-analysis/README.md)** — argues for an interpretation of a text.
+- **[Narrative](./types/narrative/README.md)** — tells a true story from experience, building to a point.
+- **[Descriptive](./types/descriptive/README.md)** — makes the reader experience a subject through sensory detail.
+- **[Expository](./types/expository/README.md)** — explains or informs, staying neutral.
+  - **[Compare and Contrast](./types/expository/compare-contrast/README.md)** — how two things are alike and different.
+  - **[Cause and Effect](./types/expository/cause-effect/README.md)** — why something happened, or what it caused.
+  - **[Process / How-To](./types/expository/process/README.md)** — walks through doing something, step by step.
+  - **[Definition](./types/expository/definition/README.md)** — establishes what a term actually means.
+- **[Persuasive / Argumentative](./types/persuasive/README.md)** — argues for a position, or moves the reader to act.
+- **[Literary Analysis](./types/literary-analysis/README.md)** — argues for an interpretation of a text.
 
 ## Components
 

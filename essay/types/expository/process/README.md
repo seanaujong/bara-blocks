@@ -2,7 +2,7 @@
 
 > **At a glance.** Lets the reader actually perform a procedure by walking through it in the order it must happen.
 
-A subtype of [Expository Essay](../expository/README.md).
+A subtype of [Expository Essay](../README.md).
 
 ## Components
 
