@@ -8,8 +8,6 @@
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Interface](../../blocks/body/interface.md), observed
 
 **For this type:** read back out of the existing implementation, not declared — everything
@@ -31,16 +29,14 @@ currently exported, whether or not it was meant to be public.
 
 ### [Decision and Rationale](../../blocks/opening/decision-and-rationale.md)
 
-**For this type:** the "alternatives" are the different readings the evidence could support; the
-decision is which one to commit to — and, going forward, write down as a Module Contract.
+**For this type:** you could either explore similar modules that could also fit your use-case,
+make your own module, or suggest changes to the existing module design
 
 > "Split `chunker.ts` into two files along the line usage already drew, rather than leave the
 > boundary implicit and load-bearing only by convention."
 
 ## Pitfalls
 
-- Treating this as a verdict on misuse when no contract ever existed to violate — the honest frame
-  is "deciding what the contract should be," not "catching a mistake."
 - Inferring a boundary from the file's name or folder location instead of from what callers
   actually import — the two can (and here, did) disagree.
 - Stopping at Observed Usage without reaching a Decision — a discovery that names the boundary but

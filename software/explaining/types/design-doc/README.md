@@ -7,23 +7,6 @@
 
 ## Blocks
 
-In the order they typically appear:
-
-### [Problem Statement](../../blocks/opening/problem-statement.md)
-
-> "Checking out a book requires a staffed register, which bottlenecks at peak hours and doesn't
-> scale to more branches without adding staff."
-
-### [Alternatives Considered](./blocks/alternatives-considered.md)
-
-> "Keep the staffed register and add a second one at peak hours — cheaper to build, but doesn't
-> reduce headcount and still bottlenecks at the busiest times."
-
-### [Decision and Rationale](../../blocks/opening/decision-and-rationale.md)
-
-> "Self-checkout kiosks: highest upfront cost, but the only option that removes the register
-> bottleneck entirely and scales to more branches without adding staff."
-
 ### [Summary](../../blocks/opening/summary.md)
 
 **For this type:** often placed first as a TL;DR for a skimming reader, in addition to (not
@@ -31,10 +14,17 @@ instead of) the fuller decision and rationale later in the doc.
 
 > "Proposing self-checkout kiosks to remove the register bottleneck at peak hours."
 
-## Pitfalls
+### [Problem Statement](../../blocks/opening/problem-statement.md)
 
-- One alternative that's obviously worse, included only to make the chosen option look good.
-- A decision with no rationale tied to a specific tradeoff — "we chose X" without saying why X
-  beat the alternatives on the dimensions that mattered.
-- Skipping the problem statement and starting from the solution, leaving a reader unable to judge
-  whether the proposed fix actually addresses the real problem.
+> "Checking out a book requires a staffed register, which bottlenecks at peak hours and doesn't
+> scale to more branches without adding staff."
+
+### [Decision and Rationale](../../blocks/opening/decision-and-rationale.md)
+
+> "Self-checkout kiosks: highest upfront cost, but the only option that removes the register
+> bottleneck entirely and scales to more branches without adding staff."
+
+### [Alternatives Considered](./blocks/alternatives-considered.md)
+
+> "Keep the staffed register and add a second one at peak hours — cheaper to build, but doesn't
+> reduce headcount and still bottlenecks at the busiest times."

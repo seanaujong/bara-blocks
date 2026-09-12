@@ -4,8 +4,6 @@
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Hook](../../blocks/opening/hook.md)
 
 > "The library's self-checkout machines process a book in four seconds. The librarian they replaced also asked how your week was going."

@@ -4,8 +4,6 @@
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Dominant Impression](./blocks/dominant-impression.md)
 
 > "The workshop smelled like a place where things got fixed, not made."

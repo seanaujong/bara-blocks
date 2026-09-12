@@ -6,8 +6,6 @@ A subtype of [Expository Essay](../README.md).
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Thesis Statement](../../../blocks/opening/thesis-statement.md)
 
 **For this type:** States the causal claim being made — which cause(s), which effect(s).

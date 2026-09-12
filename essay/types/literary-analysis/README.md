@@ -4,8 +4,6 @@
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Thesis Statement](../../blocks/opening/thesis-statement.md)
 
 **For this type:** An interpretive claim about the text, not a summary of its plot.

@@ -6,8 +6,6 @@ A subtype of [Expository Essay](../README.md).
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Thesis Statement](../../../blocks/opening/thesis-statement.md)
 
 **For this type:** Names both subjects and the basis of comparison, not just 'X and Y are similar and different.'

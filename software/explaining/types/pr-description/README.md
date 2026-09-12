@@ -6,8 +6,6 @@
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Summary](../../blocks/opening/summary.md)
 
 **For this type:** states the change and the reason for it in a line or two — often doubles as the
@@ -27,6 +25,11 @@ latency number works just as well for a backend change.
 
 > Before: the kiosk shows only "Checked out." After: it also shows "You have a $2.50 fine."
 
+### One supporting visual from software/designing/
+
+The supporting visual from `software/designing/` gives the reviewer a clear view of
+the systems being affected and how they relate to each other.
+
 ### [Code Snippet](../../blocks/body/code-snippet.md)
 
 **For this type:** the one line a reviewer would otherwise have to find themselves — not the
@@ -38,11 +41,5 @@ whole diff, which the PR already shows.
 
 ### [Test Plan](./blocks/test-plan.md)
 
-> "- [x] Unit tests for `CheckoutClient.scan`
-> - [x] Manually scanned a book with an unpaid fine on staging"
-
-## Pitfalls
-
-- A summary that restates the diff ("changed CheckoutClient.kt") instead of the reason.
-- A test plan that lists what exists ("has tests") instead of what was actually run.
-- No before/after for a change a reviewer can't picture without running it themselves.
+- [x] Unit tests for `CheckoutClient.scan`
+- [x] Manually scanned a book with an unpaid fine on staging

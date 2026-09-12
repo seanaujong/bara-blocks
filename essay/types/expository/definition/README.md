@@ -6,8 +6,6 @@ A subtype of [Expository Essay](../README.md).
 
 ## Blocks
 
-In the order they typically appear:
-
 ### [Baseline Definition](./blocks/baseline-definition.md)
 
 > "A 'third place,' as sociologist Ray Oldenburg defined it, is a space that is neither home nor work."
