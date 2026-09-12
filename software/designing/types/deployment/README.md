@@ -6,27 +6,27 @@
 
 **Audience:** architects, developers, infrastructure/operations staff.
 
-## Elements
+## Blocks
 
-### [Deployment Node](./components/deployment-node.md) (required)
+### [Deployment Node](./blocks/deployment-node.md)
 
 **For this type:** nested boxes representing the infrastructure a container instance runs on —
 region, cluster, host, runtime.
 
 > "AWS us-east-1" → "EKS Cluster" → "Checkout API Pod ×3"
 
-### [Container](../../components/container.md), as an instance (required)
+### [Container](../../blocks/container.md), as an instance
 
 **For this type:** the same containers from the Container diagram, now shown as running instances
 placed inside deployment nodes rather than as abstract boxes.
 
 > "Checkout API Pod ×3" — three running instances of the same container, load-balanced.
 
-### [Infrastructure Node](./components/infrastructure-node.md) (optional)
+### [Infrastructure Node](./blocks/infrastructure-node.md)
 
 > "Load Balancer", "Firewall", "DNS"
 
-### [Relationship](../../components/relationship.md) (required)
+### [Relationship](../../blocks/relationship.md)
 
 > "Load Balancer" —routes traffic to→ "Checkout API Pod ×3"
 

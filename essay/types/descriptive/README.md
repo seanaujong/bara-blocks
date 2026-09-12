@@ -2,23 +2,23 @@
 
 > **At a glance.** Makes the reader experience a person, place, or thing rather than just being told about it.
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Dominant Impression](./components/dominant-impression.md) (required)
+### [Dominant Impression](./blocks/dominant-impression.md)
 
 > "The workshop smelled like a place where things got fixed, not made."
 
-### [Sensory Detail](./components/sensory-detail.md) (required)
+### [Sensory Detail](./blocks/sensory-detail.md)
 
 > "Sawdust caught the light from the one high window and never seemed to fully settle."
 
-### [Figurative Language](./components/figurative-language.md) (optional)
+### [Figurative Language](./blocks/figurative-language.md)
 
 > "The vise sat at the bench's edge like a hand permanently closed."
 
-### [Conclusion](../../components/closing/conclusion.md) (required)
+### [Conclusion](../../blocks/closing/conclusion.md)
 
 **For this type:** Ties back to the dominant impression rather than summarizing facts about the subject.
 
@@ -26,7 +26,7 @@ In the order they typically appear:
 
 ## Organizational patterns
 
-Named ways to arrange this type's components, chosen by the writer:
+Named ways to arrange this type's blocks, chosen by the writer:
 
 ### Spatial
 

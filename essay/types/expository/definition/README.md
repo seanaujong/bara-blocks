@@ -4,19 +4,19 @@
 
 A subtype of [Expository Essay](../README.md).
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Baseline Definition](./components/baseline-definition.md) (required)
+### [Baseline Definition](./blocks/baseline-definition.md)
 
 > "A 'third place,' as sociologist Ray Oldenburg defined it, is a space that is neither home nor work."
 
-### [Extended Definition](./components/extended-definition.md) (required)
+### [Extended Definition](./blocks/extended-definition.md)
 
 > "A library is a third place; a self-checkout kiosk with no staff nearby to talk to is closer to a vending machine that happens to dispense books."
 
-### [Conclusion](../../../components/closing/conclusion.md) (optional)
+### [Conclusion](../../../blocks/closing/conclusion.md)
 
 > "Faster checkout is a real gain — but a library that measures only speed will miss what it's trading away."
 

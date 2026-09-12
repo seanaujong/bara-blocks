@@ -4,29 +4,30 @@
 
 A subtype of [Expository Essay](../README.md).
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Hook](../../../components/opening/hook.md) (optional)
+### [Hook](../../../blocks/opening/hook.md)
 
 > "The library's self-checkout machines process a book in four seconds. The librarian they replaced also asked how your week was going."
 
-### [Materials or Prerequisites](./components/materials-or-prerequisites.md) (optional)
+### [Materials or Prerequisites](./blocks/materials-or-prerequisites.md)
 
-**For this type:** Omit when the process needs nothing beyond what the reader already has.
+**For this type:** Named up front, even when it's just what the reader already has on hand —
+so they never discover a missing prerequisite mid-process.
 
 > "You'll need a library card and the branch's mobile app installed before your first self-checkout visit."
 
-### [Sequential Steps](./components/sequential-steps.md) (required)
+### [Sequential Steps](./blocks/sequential-steps.md)
 
 > "First, scan your card. Then scan each book's barcode. Finally, tap 'finish' before removing your books from the pad."
 
-### [Tips and Warnings](./components/tips-and-warnings.md) (optional)
+### [Tips and Warnings](./blocks/tips-and-warnings.md)
 
 > "If the machine doesn't beep, the scan didn't register — check the screen before moving to the next book."
 
-### [Conclusion](../../../components/closing/conclusion.md) (required)
+### [Conclusion](../../../blocks/closing/conclusion.md)
 
 **For this type:** States the result achieved, not just 'you're done.'
 

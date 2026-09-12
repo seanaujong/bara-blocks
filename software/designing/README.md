@@ -16,17 +16,16 @@ In order of zoom, widest first:
   made of; what actually gets deployed.
 - **[Component](./types/component/README.md)** — the modules inside one container and how
   they're used and wired together.
-- **[Dynamic](./types/dynamic/README.md)** — how those elements collaborate at runtime for one
+- **[Dynamic](./types/dynamic/README.md)** — how those blocks collaborate at runtime for one
   scenario.
 - **[Deployment](./types/deployment/README.md)** — where those containers actually run, in a
   given environment.
 
-## Elements
+## Blocks
 
-**[components/](./components/README.md)** is the shared glossary — Person, Software System,
+**[blocks/](./blocks/README.md)** is the shared glossary — Person, Software System,
 Container, Component, Relationship, Boundary — each described once here rather than re-explained
-on every type's page. See that page's naming note on the two unrelated uses of the word
-"component" in this repo.
+on every type's page.
 
 ## Further reading
 

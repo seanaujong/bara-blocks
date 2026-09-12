@@ -4,29 +4,30 @@
 > works. The reader already knows the codebase — the job is to save them from having to reverse-
 > engineer intent from the diff.
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Summary](../../components/summary.md) (required)
+### [Summary](../../blocks/summary.md)
 
 **For this type:** states the change and the reason for it in a line or two — often doubles as the
 PR title.
 
 > "Adds fine checking to the checkout scan, so the kiosk can flag unpaid fines before checkout."
 
-### [Problem Statement](../../components/problem-statement.md) (optional)
+### [Problem Statement](../../blocks/problem-statement.md)
 
 > "The kiosk currently lets a patron check out with an unpaid fine, with no warning until they try
 > to borrow again."
 
-### [Before/After](../../components/before-after.md) (optional)
+### [Before/After](../../blocks/before-after.md)
 
-**For this type:** most useful for a visible UI change; a backend-only change usually skips this.
+**For this type:** the artifact doesn't have to be a screenshot — a log line, error message, or
+latency number works just as well for a backend change.
 
 > Before: the kiosk shows only "Checked out." After: it also shows "You have a $2.50 fine."
 
-### [Code Snippet](../../components/code-snippet.md) (optional)
+### [Code Snippet](../../blocks/code-snippet.md)
 
 **For this type:** the one line a reviewer would otherwise have to find themselves — not the
 whole diff, which the PR already shows.
@@ -35,7 +36,7 @@ whole diff, which the PR already shows.
 > if (fines.hasUnpaid(patronId)) receipt.addWarning(fines.balance(patronId))
 > ```
 
-### [Test Plan](./components/test-plan.md) (required)
+### [Test Plan](./blocks/test-plan.md)
 
 > "- [x] Unit tests for `CheckoutClient.scan`
 > - [x] Manually scanned a book with an unpaid fine on staging"

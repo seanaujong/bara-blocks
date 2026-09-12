@@ -1,6 +1,6 @@
 {
   "name": "bara-blocks",
-  "description": "Building blocks for writing essays and software documents, organized as domain -> type -> component.",
+  "description": "Building blocks for writing essays and software documents, organized as domain -> type -> block.",
   "version": "0.1.0",
   "author": {
     "name": "Sean Au Jong"

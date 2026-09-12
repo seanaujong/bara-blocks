@@ -6,11 +6,11 @@
 > own interface and its actual call sites as evidence, then decides what to commit to going
 > forward. Not an audit against a known-correct answer — there often isn't one yet.
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Interface](../../components/interface.md), observed (required)
+### [Interface](../../blocks/interface.md), observed
 
 **For this type:** read back out of the existing implementation, not declared — everything
 currently exported, whether or not it was meant to be public.
@@ -19,17 +19,17 @@ currently exported, whether or not it was meant to be public.
 > `computeTypeableIndices`, `typeableChunkIndices`, `adjacentTypeableChunk`,
 > `typeableIndicesFromChunk`
 
-### [Observed Usage](./components/observed-usage.md) (required)
+### [Observed Usage](./blocks/observed-usage.md)
 
 > `cli.tsx` imports only the format-detection group; `app.tsx` imports only the typing-path group.
 > No production caller imports from both.
 
-### [Inferred Boundary](./components/inferred-boundary.md) (required)
+### [Inferred Boundary](./blocks/inferred-boundary.md)
 
 > A document chunker and a typing-path index, already split at every real call site even though
 > the file conflates them.
 
-### [Decision and Rationale](../../components/decision-and-rationale.md) (required)
+### [Decision and Rationale](../../blocks/decision-and-rationale.md)
 
 **For this type:** the "alternatives" are the different readings the evidence could support; the
 decision is which one to commit to — and, going forward, write down as a Module Contract.

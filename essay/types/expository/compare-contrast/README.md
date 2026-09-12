@@ -4,21 +4,21 @@
 
 A subtype of [Expository Essay](../README.md).
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Thesis Statement](../../../components/opening/thesis-statement.md) (required)
+### [Thesis Statement](../../../blocks/opening/thesis-statement.md)
 
 **For this type:** Names both subjects and the basis of comparison, not just 'X and Y are similar and different.'
 
 > "The library's new self-checkout system cuts wait times but removes a point of human contact many patrons relied on."
 
-### [Comparison Points](./components/comparison-points.md) (required)
+### [Comparison Points](./blocks/comparison-points.md)
 
 > "On cost: self-checkout runs $0.02/transaction in maintenance; a staffed register runs $0.85 in wages."
 
-### [Conclusion](../../../components/closing/conclusion.md) (required)
+### [Conclusion](../../../blocks/closing/conclusion.md)
 
 **For this type:** States why the comparison matters, not just a recap of what was compared.
 
@@ -26,7 +26,7 @@ In the order they typically appear:
 
 ## Organizational patterns
 
-Named ways to arrange this type's components, chosen by the writer:
+Named ways to arrange this type's blocks, chosen by the writer:
 
 ### Block (Subject-by-Subject)
 

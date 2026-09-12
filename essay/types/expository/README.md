@@ -2,31 +2,31 @@
 
 > **At a glance.** Explains or informs on a topic using facts and examples while staying neutral — the writer's opinion isn't the point.
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Hook](../../components/opening/hook.md) (optional)
+### [Hook](../../blocks/opening/hook.md)
 
 > "The library's self-checkout machines process a book in four seconds. The librarian they replaced also asked how your week was going."
 
-### [Thesis Statement](../../components/opening/thesis-statement.md) (required)
+### [Thesis Statement](../../blocks/opening/thesis-statement.md)
 
 **For this type:** States a topic or fact, not an opinion — the line that distinguishes this from persuasive writing.
 
 > "The library's new self-checkout system cuts wait times but removes a point of human contact many patrons relied on."
 
-### [Topic Sentence](../../components/body/topic-sentence.md) (required)
+### [Topic Sentence](../../blocks/body/topic-sentence.md)
 
 > "The first reason self-checkout saves time is that it removes the queue for a single staffed register."
 
-### [Evidence](../../components/body/evidence.md) (required)
+### [Evidence](../../blocks/body/evidence.md)
 
 **For this type:** Facts, examples, or data — not the writer's opinion.
 
 > "Average checkout time dropped from 90 seconds to 12 seconds after the machines were installed (library annual report, 2025)."
 
-### [Conclusion](../../components/closing/conclusion.md) (required)
+### [Conclusion](../../blocks/closing/conclusion.md)
 
 **For this type:** Synthesizes what the evidence adds up to, rather than repeating the thesis.
 
@@ -34,7 +34,7 @@ In the order they typically appear:
 
 ## Organizational patterns
 
-Named ways to arrange this type's components, chosen by the writer:
+Named ways to arrange this type's blocks, chosen by the writer:
 
 ### Chronological
 

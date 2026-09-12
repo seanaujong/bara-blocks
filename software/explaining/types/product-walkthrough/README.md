@@ -4,25 +4,25 @@
 > they click, what they see, why it's better than before. No implementation detail; the reader is
 > a user, not a developer.
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Problem Statement](../../components/problem-statement.md) (optional)
+### [Problem Statement](../../blocks/problem-statement.md)
 
 > "Checking out a book used to mean waiting in line for the one staffed register, even for a
 > single item."
 
-### [Step](../../components/step.md) (required)
+### [Step](../../blocks/step.md)
 
 > "1. Scan the book's barcode under the kiosk's reader."
 > "2. The screen shows the title and confirms it's checked out to your card."
 
-### [Before/After](../../components/before-after.md) (optional)
+### [Before/After](../../blocks/before-after.md)
 
 > Before: a staffed register with a line. After: an empty kiosk with a patron scanning a book.
 
-### [Summary](../../components/summary.md) (optional)
+### [Summary](../../blocks/summary.md)
 
 > "Patrons can now check out a book in under 15 seconds without waiting for a staffed register."
 

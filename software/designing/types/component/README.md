@@ -7,15 +7,15 @@
 
 **Audience:** architects and developers.
 
-## Elements
+## Blocks
 
-### [Component](../../components/component.md) (required)
+### [Component](../../blocks/component.md)
 
 **For this type:** every component inside the one container in scope, drawn as its own box.
 
 > "Checkout Controller", "Fines Repository", "Receipt Formatter" — all inside the Checkout API.
 
-### [Container](../../components/container.md) (required)
+### [Container](../../blocks/container.md)
 
 **For this type:** sibling containers the components talk to, drawn as single boxes — you don't
 decompose a container you're not zoomed into.
@@ -23,11 +23,11 @@ decompose a container you're not zoomed into.
 > "Catalog Database" — the Fines Repository reads and writes it, but it isn't broken into
 > components here.
 
-### [Person](../../components/person.md) / [Software System](../../components/software-system.md), external (optional)
+### [Person](../../blocks/person.md) / [Software System](../../blocks/software-system.md), external
 
 > Anyone or anything outside the container that a component talks to directly.
 
-### [Relationship](../../components/relationship.md) (required)
+### [Relationship](../../blocks/relationship.md)
 
 > "Checkout Controller" —calls→ "Fines Repository"
 > "Fines Repository" —reads/writes→ "Catalog Database" [JDBC]

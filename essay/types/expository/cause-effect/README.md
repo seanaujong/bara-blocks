@@ -4,27 +4,27 @@
 
 A subtype of [Expository Essay](../README.md).
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Thesis Statement](../../../components/opening/thesis-statement.md) (required)
+### [Thesis Statement](../../../blocks/opening/thesis-statement.md)
 
 **For this type:** States the causal claim being made — which cause(s), which effect(s).
 
 > "The library's new self-checkout system cuts wait times but removes a point of human contact many patrons relied on."
 
-### [Causal Link](./components/causal-link.md) (required)
+### [Causal Link](./blocks/causal-link.md)
 
 > "Shorter queues mean fewer patrons leave before checking out at all — that's the direct mechanism behind the circulation increase, not just correlation with the season."
 
-### [Conclusion](../../../components/closing/conclusion.md) (required)
+### [Conclusion](../../../blocks/closing/conclusion.md)
 
 > "Faster checkout is a real gain — but a library that measures only speed will miss what it's trading away."
 
 ## Organizational patterns
 
-Named ways to arrange this type's components, chosen by the writer:
+Named ways to arrange this type's blocks, chosen by the writer:
 
 ### Single Cause, Multiple Effects
 

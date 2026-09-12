@@ -6,27 +6,27 @@
 
 **Audience:** technical people inside and outside the team — architects, developers, operations.
 
-## Elements
+## Blocks
 
-### [Container](../../components/container.md) (required)
+### [Container](../../blocks/container.md)
 
-**For this type:** every container in the system's [boundary](../../components/boundary.md),
+**For this type:** every container in the system's [boundary](../../blocks/boundary.md),
 drawn as its own box with its technology named.
 
 > "Self-Checkout Kiosk App" [React]
 > "Checkout API" [Kotlin / Spring Boot]
 > "Catalog Database" [PostgreSQL]
 
-### [Person](../../components/person.md) (required)
+### [Person](../../blocks/person.md)
 
 > "Patron", "Librarian" — same people as the Context diagram, now shown talking to specific
 > containers instead of the system as a whole.
 
-### [Software System](../../components/software-system.md), external (optional)
+### [Software System](../../blocks/software-system.md), external
 
 > "Payment Processor" — still a single box; it's not your container to decompose.
 
-### [Relationship](../../components/relationship.md) (required)
+### [Relationship](../../blocks/relationship.md)
 
 **For this type:** labeled with the technology or protocol, not just the action — this is what
 tells a reader how the pieces actually talk.

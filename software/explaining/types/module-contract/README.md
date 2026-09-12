@@ -6,15 +6,15 @@
 > check their usage against, instead of having to reconstruct it from behavior (see
 > [Module Discovery](../module-discovery/README.md), the type for when that record doesn't exist).
 
-## Components
+## Blocks
 
 In the order they typically appear:
 
-### [Purpose](./components/purpose.md) (required)
+### [Purpose](./blocks/purpose.md)
 
 > "Fines Repository — looks up and records a patron's unpaid fine balance."
 
-### [Interface](../../components/interface.md) (required)
+### [Interface](../../blocks/interface.md)
 
 **For this type:** the intended public surface, declared up front — signatures and types, not a
 usage sample.
@@ -22,12 +22,12 @@ usage sample.
 > `hasUnpaid(patronId: string): boolean`
 > `balance(patronId: string): number`
 
-### [Invariants](./components/invariants.md) (required)
+### [Invariants](./blocks/invariants.md)
 
 > - "A patron ID that doesn't exist returns a zero balance, never an error."
 > - "Does not decide whether an unpaid fine blocks checkout — that's the caller's job."
 
-### [Code Snippet](../../components/code-snippet.md) (optional)
+### [Code Snippet](../../blocks/code-snippet.md)
 
 **For this type:** one canonical call, showing the calling convention the Interface section only
 described in the abstract.
