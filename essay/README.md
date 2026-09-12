@@ -8,18 +8,18 @@
 
 ## Essay types
 
-- **[Narrative](./narrative.md)** — tells a true story from experience, building to a point.
-- **[Descriptive](./descriptive.md)** — makes the reader experience a subject through sensory detail.
-- **[Expository](./expository.md)** — explains or informs, staying neutral.
-  - **[Compare and Contrast](./compare-contrast.md)** — how two things are alike and different.
-  - **[Cause and Effect](./cause-effect.md)** — why something happened, or what it caused.
-  - **[Process / How-To](./process.md)** — walks through doing something, step by step.
-  - **[Definition](./definition.md)** — establishes what a term actually means.
-- **[Persuasive / Argumentative](./persuasive.md)** — argues for a position, or moves the reader to act.
-- **[Literary Analysis](./literary-analysis.md)** — argues for an interpretation of a text.
+- **[Narrative](./types/narrative.md)** — tells a true story from experience, building to a point.
+- **[Descriptive](./types/descriptive.md)** — makes the reader experience a subject through sensory detail.
+- **[Expository](./types/expository.md)** — explains or informs, staying neutral.
+  - **[Compare and Contrast](./types/compare-contrast.md)** — how two things are alike and different.
+  - **[Cause and Effect](./types/cause-effect.md)** — why something happened, or what it caused.
+  - **[Process / How-To](./types/process.md)** — walks through doing something, step by step.
+  - **[Definition](./types/definition.md)** — establishes what a term actually means.
+- **[Persuasive / Argumentative](./types/persuasive.md)** — argues for a position, or moves the reader to act.
+- **[Literary Analysis](./types/literary-analysis.md)** — argues for an interpretation of a text.
 
 ## Components
 
-**[components.md](./components.md)** is the shared glossary — a thesis statement, a hook, a
-counterargument, and so on each show up across more than one essay type above, described once
-here rather than re-explained on every page.
+**[components/](./components/)** is the shared glossary, one file per component — a thesis
+statement, a hook, a counterargument, and so on each show up across more than one essay type
+above, described once here rather than re-explained on every page.
