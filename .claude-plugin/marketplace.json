@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "bara-blocks",
+  "description": "Building blocks for writing essays and software documents.",
+  "owner": {
+    "name": "Sean Au Jong"
+  },
+  "plugins": [
+    {
+      "name": "bara-blocks",
+      "description": "Building blocks for writing essays and software documents, organized as domain -> type -> component.",
+      "author": {
+        "name": "Sean Au Jong"
+      },
+      "source": "."
+    }
+  ]
+}
