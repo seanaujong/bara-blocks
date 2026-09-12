@@ -67,7 +67,17 @@ that no type names, and what did a listed block never get used for)?
 
 ## Reporting the result
 
-Primary claim first, then a per-header table or list of secondary claim + evidence, then the
-catalog comparison: matches, blocks the document skipped, and sections the catalog doesn't name.
-Keep evidence to the sentences that actually do the work — quoting every sentence under a header
-defeats the point of comprehension being a compression.
+Report the claims on their own before bringing in evidence — the two answer different questions,
+and merging them forces the reader to hunt for the argument's shape inside its support:
+
+1. **The claim structure alone.** Primary claim, then the secondary claims as a flat list or
+   outline, each still phrased as a claim (per step 3) — no evidence yet. This is the document's
+   argument compressed to its skeleton; a reader should be able to tell from this alone whether
+   the document holds together, before seeing whether it's actually backed up.
+2. **The same structure with evidence attached.** Repeat it — a table or a list, one row or
+   entry per secondary claim — pairing each with its evidence sentences (or noting it has none,
+   per step 4).
+
+Follow both with the catalog comparison: matches, blocks the document skipped, and sections the
+catalog doesn't name. Keep evidence to the sentences that actually do the work — quoting every
+sentence under a header defeats the point of comprehension being a compression.
