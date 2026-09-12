@@ -30,6 +30,17 @@ pick Container if the system spans several deployable pieces.
 > See [designing/types/component](../../../designing/types/component/README.md) for the block
 > vocabulary this diagram is built from — Component, Container, Relationship.
 
+### [Dynamic](../../../designing/types/dynamic/README.md), optional
+
+**For this type:** a numbered trace of the single most common runtime path through the layers
+already drawn above (one keystroke, one simulation step) — not a rare edge case. Reuses the same
+boxes; adds only the order.
+
+> 1. A keystroke dispatches an action to the reducer.
+> 2. The reducer returns new state.
+> 3. Four hooks derive cheap view data from it.
+> 4. The frame renders.
+
 ### [Layer Responsibilities](./blocks/layer-responsibilities.md)
 
 > "The Checkout API is the only code that touches the network... It doesn't decide whether an
