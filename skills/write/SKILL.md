@@ -55,12 +55,10 @@ document's shape:
    document (its register, its content).
 
 5. **Then find one more block that best visualizes this document's primary claim.** This
-   is a deliberate addition on top of the template, not one of its listed blocks — pull it
-   from wherever it fits (the same domain's shared glossary, another type, anywhere the
-   catalog defines one) because it's the single best way to let the reader see the point
-   instead of taking your word for it: a Before/After pair, a Code Snippet, a diagram.
-   Skip this step only if nothing in the catalog would actually add that, not because
-   picking one feels like extra work.
+   is a deliberate addition beyond the template, not one of its listed blocks. For a
+   `software/explaining/` document, pull it from `software/designing/` — a Container,
+   Component, or Dynamic diagram often makes a structural claim visible in a way prose
+   can't. If that visual is a diagram going into the document as ASCII art, use the `ascii-diagram` skill.
 
 6. **If nothing fits, say so.** If the document is a genuinely novel shape the catalog
    doesn't cover, don't force it into the nearest type. Draft it on its own merits and

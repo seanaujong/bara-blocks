@@ -8,21 +8,21 @@
 
 In the order they typically appear:
 
-### [Problem Statement](../../blocks/problem-statement.md)
+### [Problem Statement](../../blocks/opening/problem-statement.md)
 
 > "Checking out a book used to mean waiting in line for the one staffed register, even for a
 > single item."
 
-### [Step](../../blocks/step.md)
+### [Step](../../blocks/body/step.md)
 
 > "1. Scan the book's barcode under the kiosk's reader."
 > "2. The screen shows the title and confirms it's checked out to your card."
 
-### [Before/After](../../blocks/before-after.md)
+### [Before/After](../../blocks/body/before-after.md)
 
 > Before: a staffed register with a line. After: an empty kiosk with a patron scanning a book.
 
-### [Summary](../../blocks/summary.md)
+### [Summary](../../blocks/opening/summary.md)
 
 > "Patrons can now check out a book in under 15 seconds without waiting for a staffed register."
 

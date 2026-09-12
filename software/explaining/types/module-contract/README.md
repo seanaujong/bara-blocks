@@ -14,7 +14,7 @@ In the order they typically appear:
 
 > "Fines Repository — looks up and records a patron's unpaid fine balance."
 
-### [Interface](../../blocks/interface.md)
+### [Interface](../../blocks/body/interface.md)
 
 **For this type:** the intended public surface, declared up front — signatures and types, not a
 usage sample.
@@ -27,7 +27,7 @@ usage sample.
 > - "A patron ID that doesn't exist returns a zero balance, never an error."
 > - "Does not decide whether an unpaid fine blocks checkout — that's the caller's job."
 
-### [Code Snippet](../../blocks/code-snippet.md)
+### [Code Snippet](../../blocks/body/code-snippet.md)
 
 **For this type:** one canonical call, showing the calling convention the Interface section only
 described in the abstract.

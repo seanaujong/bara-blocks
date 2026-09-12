@@ -9,7 +9,7 @@
 
 In the order they typically appear:
 
-### [Problem Statement](../../blocks/problem-statement.md)
+### [Problem Statement](../../blocks/opening/problem-statement.md)
 
 > "Checking out a book requires a staffed register, which bottlenecks at peak hours and doesn't
 > scale to more branches without adding staff."
@@ -19,12 +19,12 @@ In the order they typically appear:
 > "Keep the staffed register and add a second one at peak hours — cheaper to build, but doesn't
 > reduce headcount and still bottlenecks at the busiest times."
 
-### [Decision and Rationale](../../blocks/decision-and-rationale.md)
+### [Decision and Rationale](../../blocks/opening/decision-and-rationale.md)
 
 > "Self-checkout kiosks: highest upfront cost, but the only option that removes the register
 > bottleneck entirely and scales to more branches without adding staff."
 
-### [Summary](../../blocks/summary.md)
+### [Summary](../../blocks/opening/summary.md)
 
 **For this type:** often placed first as a TL;DR for a skimming reader, in addition to (not
 instead of) the fuller decision and rationale later in the doc.

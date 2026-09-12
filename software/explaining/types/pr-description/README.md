@@ -8,26 +8,26 @@
 
 In the order they typically appear:
 
-### [Summary](../../blocks/summary.md)
+### [Summary](../../blocks/opening/summary.md)
 
 **For this type:** states the change and the reason for it in a line or two — often doubles as the
 PR title.
 
 > "Adds fine checking to the checkout scan, so the kiosk can flag unpaid fines before checkout."
 
-### [Problem Statement](../../blocks/problem-statement.md)
+### [Problem Statement](../../blocks/opening/problem-statement.md)
 
 > "The kiosk currently lets a patron check out with an unpaid fine, with no warning until they try
 > to borrow again."
 
-### [Before/After](../../blocks/before-after.md)
+### [Before/After](../../blocks/body/before-after.md)
 
 **For this type:** the artifact doesn't have to be a screenshot — a log line, error message, or
 latency number works just as well for a backend change.
 
 > Before: the kiosk shows only "Checked out." After: it also shows "You have a $2.50 fine."
 
-### [Code Snippet](../../blocks/code-snippet.md)
+### [Code Snippet](../../blocks/body/code-snippet.md)
 
 **For this type:** the one line a reviewer would otherwise have to find themselves — not the
 whole diff, which the PR already shows.

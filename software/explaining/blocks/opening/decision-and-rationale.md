@@ -8,5 +8,7 @@ In a Design Doc the alternatives are hypothetical options weighed before anythin
 Module Discovery the "alternatives" are the divergent readings of an existing module's boundary,
 and the decision is which reading to commit to going forward.
 
-> "Self-checkout kiosks: highest upfront cost, but the only option that removes the register
-> bottleneck entirely and scales to more branches without adding staff."
+> "We decided to purchase and install self-checkout kiosks for our grocery stores. While self-checkout kiosks
+> have a high up-front installation cost, we can scale customer checkout throughput across all our stores.
+> Self-checkout kiosks are more loved by customers who don't want to talk to a human, or have a small amount
+> of items."

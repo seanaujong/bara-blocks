@@ -10,7 +10,7 @@
 
 In the order they typically appear:
 
-### [Interface](../../blocks/interface.md), observed
+### [Interface](../../blocks/body/interface.md), observed
 
 **For this type:** read back out of the existing implementation, not declared — everything
 currently exported, whether or not it was meant to be public.
@@ -29,7 +29,7 @@ currently exported, whether or not it was meant to be public.
 > A document chunker and a typing-path index, already split at every real call site even though
 > the file conflates them.
 
-### [Decision and Rationale](../../blocks/decision-and-rationale.md)
+### [Decision and Rationale](../../blocks/opening/decision-and-rationale.md)
 
 **For this type:** the "alternatives" are the different readings the evidence could support; the
 decision is which one to commit to — and, going forward, write down as a Module Contract.

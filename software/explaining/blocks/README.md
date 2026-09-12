@@ -6,16 +6,16 @@
 
 ## Opening
 
-- [Problem Statement](./problem-statement.md)
+- [Problem Statement](opening/problem-statement.md)
 
 ## Body
 
-- [Step](./step.md)
-- [Before/After](./before-after.md)
-- [Code Snippet](./code-snippet.md)
-- [Interface](./interface.md)
+- [Step](body/step.md)
+- [Before/After](body/before-after.md)
+- [Code Snippet](body/code-snippet.md)
+- [Interface](body/interface.md)
 
 ## Closing
 
-- [Decision and Rationale](./decision-and-rationale.md)
-- [Summary](./summary.md)
+- [Decision and Rationale](opening/decision-and-rationale.md)
+- [Summary](opening/summary.md)

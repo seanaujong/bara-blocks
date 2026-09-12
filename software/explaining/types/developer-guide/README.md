@@ -8,7 +8,7 @@
 
 In the order they typically appear:
 
-### [Problem Statement](../../blocks/problem-statement.md)
+### [Problem Statement](../../blocks/opening/problem-statement.md)
 
 > "The catalog API doesn't tell you whether a scanned item has an unpaid fine attached."
 
@@ -16,23 +16,23 @@ In the order they typically appear:
 
 > "Requires the checkout SDK v2.3+ and a library API key set as `LIBRARY_API_KEY`."
 
-### [Step](../../blocks/step.md)
+### [Step](../../blocks/body/step.md)
 
 > "1. Initialize the client with your API key."
 > "2. Call `checkoutClient.scan(barcode)`."
 
-### [Code Snippet](../../blocks/code-snippet.md)
+### [Code Snippet](../../blocks/body/code-snippet.md)
 
 > ```kotlin
 > val receipt = checkoutClient.scan(barcode = "9780143127550")
 > ```
 
-### [Before/After](../../blocks/before-after.md)
+### [Before/After](../../blocks/body/before-after.md)
 
 > Before: scanning an item with a fine logs `WARN: fine check skipped — endpoint timeout`.
 > After: the same call logs `INFO: fine check ok — no fines`.
 
-### [Summary](../../blocks/summary.md)
+### [Summary](../../blocks/opening/summary.md)
 
 > "You can now scan an item and get back a receipt that includes any unpaid fine."
 
