@@ -1,10 +1,11 @@
 # Architecture Overview
 
-> Declares the shape a project already has — not a problem being solved today, but the structure
-> a reader should hold in their head before touching any layer or module. The reader is orienting
-> themselves in an existing system, not deciding whether to approve one — that's what tells this
-> type apart from a [Design Doc](../design-doc/README.md), which argues for a not-yet-built
-> option to a not-yet-solved problem.
+> States the author's intended shape for a project, kept current as that vision evolves — not a
+> problem being solved today, but the structure a reader should hold in their head before
+> touching any layer or module, and the contract the code is expected to match. The reader is
+> orienting themselves against what the system is meant to be, not deciding whether to approve a
+> proposal — that's what tells this type apart from a [Design Doc](../design-doc/README.md),
+> which argues for a not-yet-built option to a not-yet-solved problem.
 
 ## Blocks
 
@@ -47,8 +48,8 @@ into modules; pick Container if the system spans several deployable pieces.
 ## Pitfalls
 
 - Reaching for [Problem Statement](../../blocks/opening/problem-statement.md) or
-  [Alternatives Considered](../design-doc/blocks/alternatives-considered.md) — this type declares
-  a settled shape rather than arguing for one; those blocks belong to
+  [Alternatives Considered](../design-doc/blocks/alternatives-considered.md) — this type states an
+  intended shape rather than arguing for one; those blocks belong to
   [Design Doc](../design-doc/README.md).
 - Listing invariants without an Enforcement Matrix — an invariant with no test, type, or explicit
   "not enforced yet" is a hope, not a contract.
