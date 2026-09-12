@@ -4,11 +4,7 @@
 > into a small, stable set of components — a thesis, a hook, a counterargument, a resolution.
 > The point of writing it down this way isn't to publish a taxonomy — it's so that, faced with a
 > piece of writing, you can name what you're actually trying to do and see which components are
-> likely to help. Every file here is plain Markdown, hand-edited directly — no schema, no
-> generator. Edit a file when you learn something that changes it.
-
-Not sure where to start? **[Which Essay Type Do I Need?](./routing.md)** answers that in one or
-two questions and links straight to the type that fits.
+> likely to help.
 
 ## Essay types
 
