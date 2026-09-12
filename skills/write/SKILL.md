@@ -53,11 +53,14 @@ document's shape:
    the order given. A "For this type" note says how to write that block for this
    document (its register, its content).
 
-5. **Then find one more block that best visualizes this document's primary claim.** This
-   is a deliberate addition beyond the template, not one of its listed blocks. For a
-   `software/explaining/` document, pull it from `software/designing/` — a Container,
-   Component, or Dynamic diagram often makes a structural claim visible in a way prose
-   can't. If that visual is a diagram going into the document as ASCII art, use the `ascii-diagram` skill.
+5. **Then browse the wider blocks catalog for anything else that would help.** The type's
+   list is a starting point, not a fence — blocks are usable at your discretion wherever
+   they strengthen the primary claim. Check the domain's shared glossary
+   (`blocks/README.md`), other types' blocks, and — for a `software/explaining/` document
+   especially — `software/designing/`'s diagram blocks (a Container, Component, or Dynamic
+   diagram often makes a structural claim visible in a way prose can't). Add what genuinely
+   helps; don't force one in for its own sake. If a visual is going in as ASCII art, use the
+   `ascii-diagram` skill.
 
 6. **If nothing fits, say so — and don't force it.** A document needing something the catalog
    doesn't name is usually a sign the author was thinking clearly about their specific case, not
