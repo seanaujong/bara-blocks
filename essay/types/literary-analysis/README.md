@@ -6,37 +6,27 @@
 
 In the order they typically appear:
 
-### Thesis Statement (required)
-
-States the essay's central claim up front so the reader knows, before reading further, what the whole essay resolves — the crux the rest of the essay answers.
+### [Thesis Statement](../../components/opening/thesis-statement.md) (required)
 
 **For this type:** An interpretive claim about the text, not a summary of its plot.
 
 > "The library's new self-checkout system cuts wait times but removes a point of human contact many patrons relied on."
 
-### Topic Sentence (required)
-
-States the one idea a body paragraph exists to support, so a reader can track the essay's argument paragraph by paragraph without reading every sentence.
+### [Topic Sentence](../../components/body/topic-sentence.md) (required)
 
 > "The first reason self-checkout saves time is that it removes the queue for a single staffed register."
 
-### Textual Evidence (required)
-
-Supports an interpretive claim about a text using the text's own words, so the interpretation is checkable against the source rather than asserted.
+### [Textual Evidence](./components/textual-evidence.md) (required)
 
 > "'He could not remember when the house had last been quiet' signals the isolation the rest of the chapter develops."
 
-### Close Reading (required)
-
-Explains how a piece of textual evidence actually supports the claim — the step that turns a quote into an argument instead of decoration.
+### [Close Reading](./components/close-reading.md) (required)
 
 **For this type:** The step most drafts skip — a quote dropped in with no explanation of how it supports the claim.
 
 > "The word 'remember' implies the quiet is not new but has become invisible to him — which is the isolation the essay's thesis names."
 
-### Conclusion (required)
-
-Leaves the reader with why the essay mattered, not just a repeat of what it said.
+### [Conclusion](../../components/closing/conclusion.md) (required)
 
 **For this type:** States the significance of the interpretation, not a recap of the text.
 

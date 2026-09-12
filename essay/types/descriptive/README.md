@@ -6,27 +6,19 @@
 
 In the order they typically appear:
 
-### Dominant Impression (required)
-
-Names the single overall feeling or idea every detail in the essay will serve, so the details add up to one picture instead of a list.
+### [Dominant Impression](./components/dominant-impression.md) (required)
 
 > "The workshop smelled like a place where things got fixed, not made."
 
-### Sensory Detail (required)
-
-Gives the reader something to see, hear, smell, taste, or touch, so the description is experienced rather than told.
+### [Sensory Detail](./components/sensory-detail.md) (required)
 
 > "Sawdust caught the light from the one high window and never seemed to fully settle."
 
-### Figurative Language (optional)
-
-Uses comparison (simile, metaphor) to convey a quality that a literal description would only state.
+### [Figurative Language](./components/figurative-language.md) (optional)
 
 > "The vise sat at the bench's edge like a hand permanently closed."
 
-### Conclusion (required)
-
-Leaves the reader with why the essay mattered, not just a repeat of what it said.
+### [Conclusion](../../components/closing/conclusion.md) (required)
 
 **For this type:** Ties back to the dominant impression rather than summarizing facts about the subject.
 
