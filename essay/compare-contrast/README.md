@@ -2,7 +2,7 @@
 
 > **At a glance.** Explains two subjects by showing how they resemble and differ from each other on the same points.
 
-A subtype of [Expository Essay](./expository.md).
+A subtype of [Expository Essay](../expository/README.md).
 
 ## Components
 

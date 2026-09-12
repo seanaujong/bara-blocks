@@ -2,7 +2,7 @@
 
 > **At a glance.** Explains why something happened, or what resulted from it, by demonstrating the causal mechanism rather than asserting a link.
 
-A subtype of [Expository Essay](./expository.md).
+A subtype of [Expository Essay](../expository/README.md).
 
 ## Components
 
