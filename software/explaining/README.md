@@ -15,6 +15,8 @@
   you know it works.
 - **[Design Doc](./types/design-doc/README.md)** — what should be built, which options were
   weighed, and why one was chosen.
+- **[Architecture Overview](./types/architecture-overview/README.md)** — the shape a project
+  already has: its layers, their contracts, and how to extend them.
 - **[Module Contract](./types/module-contract/README.md)** — a module's intended purpose,
   interface, and invariants, declared up front.
 - **[Module Discovery](./types/module-discovery/README.md)** — a module's usage reconstructed
