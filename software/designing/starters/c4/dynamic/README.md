@@ -10,7 +10,7 @@
 
 ## Blocks
 
-### [Container](../../blocks/container.md) or [Component](../../blocks/component.md)
+### [Container](../../../blocks/container.md) or [Component](../../../blocks/component.md)
 
 **For this starter:** whichever static blocks the scenario actually touches, reused from a
 Container or Component diagram — a Dynamic diagram doesn't introduce new structural blocks, it

@@ -1,6 +1,6 @@
 # Numbered Interaction
 
-A [relationship](../../../blocks/relationship.md) labeled with a sequence number instead of
+A [relationship](../../../../blocks/relationship.md) labeled with a sequence number instead of
 (or alongside) a technology tag, showing where it falls in one scenario's order of events.
 Blocks stay in a free-form layout — unlike a UML sequence diagram, there's no lifeline forcing a
 strict top-to-bottom timeline, so the same static diagram can host several numbered flows.

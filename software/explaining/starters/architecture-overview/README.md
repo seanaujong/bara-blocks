@@ -21,16 +21,16 @@ reader should be able to extract the core claims without reading past this block
 > structure protects — with data flowing one direction, adapter → app → pure modules → output,
 > and no upward references.
 
-### [Component](../../../designing/starters/component/README.md) (or [Container](../../../designing/starters/container/README.md))
+### [Component](../../../designing/starters/c4/component/README.md) (or [Container](../../../designing/starters/c4/container/README.md))
 
 **For this starter:** every layer or module named in prose should trace back to a box here.
 Pick Component for a single-process system decomposed into modules;
 pick Container if the system spans several deployable pieces.
 
-> See [designing/starters/component](../../../designing/starters/component/README.md) for the block
-> vocabulary this diagram is built from — Component, Container, Relationship.
+> See [designing/starters/c4/component](../../../designing/starters/c4/component/README.md) for the
+> block vocabulary this diagram is built from — Component, Container, Relationship.
 
-### [Dynamic](../../../designing/starters/dynamic/README.md), optional
+### [Dynamic](../../../designing/starters/c4/dynamic/README.md), optional
 
 **For this starter:** a numbered trace of the single most common runtime path through the layers
 already drawn above (one keystroke, one simulation step) — not a rare edge case. Reuses the same
@@ -40,6 +40,13 @@ boxes; adds only the order.
 > 2. The reducer returns new state.
 > 3. Four hooks derive cheap view data from it.
 > 4. The frame renders.
+
+### [Unidirectional Data Flow](../../../designing/starters/patterns/unidirectional-data-flow/README.md) or [Layered Architecture](../../../designing/starters/patterns/layered-architecture/README.md), optional
+
+**For this starter:** reach for one of these instead of (or alongside) Component/Dynamic when the
+shape worth drawing is the state/event loop itself, or the layer-dependency rule the
+[Discipline](./blocks/discipline.md) block below states in prose — a picture of "no upward
+imports" is a stronger claim than the sentence.
 
 ### [Layer Responsibilities](./blocks/layer-responsibilities.md)
 

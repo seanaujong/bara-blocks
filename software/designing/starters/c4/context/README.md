@@ -8,26 +8,26 @@
 
 ## Blocks
 
-### [Software System](../../blocks/software-system.md)
+### [Software System](../../../blocks/software-system.md)
 
 **For this starter:** the one system in scope, drawn as a single box. What's inside it is out of
 scope at this zoom level — that's the [Container](../container/README.md) diagram's job.
 
 > "Library Self-Checkout System"
 
-### [Person](../../blocks/person.md)
+### [Person](../../../blocks/person.md)
 
 > "Patron" — checks a book out without a staffed register.
 > "Librarian" — resolves exceptions the machine can't handle.
 
-### [Software System](../../blocks/software-system.md), external
+### [Software System](../../../blocks/software-system.md), external
 
 **For this starter:** other systems, drawn as boxes outside the boundary. You show *that* a
 relationship exists, not how.
 
 > "Payment Processor" — settles fines.
 
-### [Relationship](../../blocks/relationship.md)
+### [Relationship](../../../blocks/relationship.md)
 
 > "Patron" —checks out books using→ "Library Self-Checkout System"
 > "Library Self-Checkout System" —sends fine payments to→ "Payment Processor"

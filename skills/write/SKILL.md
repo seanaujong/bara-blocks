@@ -46,9 +46,11 @@ document's shape:
 
 3. **Follow block links out to the shared glossary when they point there.** A block used
    by only one starter is described inline or in that starter's own `blocks/` folder; a
-   block shared across starters is described once in the domain's `blocks/README.md`
-   glossary and linked from every starter that uses it, rather than restated. If a block
-   link goes to `../../blocks/<name>.md`, read that file — it's the actual definition.
+   block shared across starters is described once in a `blocks/README.md` glossary — the
+   domain's own, or a narrower one shared by a group of related starters — and linked from
+   every starter that uses it, rather than restated. If a block link climbs out of the
+   current starter's folder to a `blocks/<name>.md`, read that file — it's the actual
+   definition.
 
 4. **Fill out every block the starter lists.** Draft them in
    the order given. A "For this starter" note says how to write that block for this

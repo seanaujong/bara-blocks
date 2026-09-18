@@ -15,7 +15,7 @@ region, cluster, host, runtime.
 
 > "AWS us-east-1" → "EKS Cluster" → "Checkout API Pod ×3"
 
-### [Container](../../blocks/container.md), as an instance
+### [Container](../../../blocks/container.md), as an instance
 
 **For this starter:** the same containers from the Container diagram, now shown as running instances
 placed inside deployment nodes rather than as abstract boxes.
@@ -26,7 +26,7 @@ placed inside deployment nodes rather than as abstract boxes.
 
 > "Load Balancer", "Firewall", "DNS"
 
-### [Relationship](../../blocks/relationship.md)
+### [Relationship](../../../blocks/relationship.md)
 
 > "Load Balancer" —routes traffic to→ "Checkout API Pod ×3"
 
