@@ -1,11 +1,12 @@
 # Vocabulary Funnel
 
-An abridged form of the [State](./state.md)/[Event](./event.md) loop that drops the cycle and
-instead stacks the [layers](../../blocks/layer.md) a value crosses on its way from the platform to
-the core, narrowing at each boundary: the outer layer speaks the runtime's vocabulary (DOM nodes,
+Stacks the [layers](../../blocks/layer.md) a value crosses on its way from the platform to the
+core, narrowing at each boundary: the outer layer speaks the runtime's vocabulary (DOM nodes,
 `Intent`, `Bitmap`), and each boundary crossed translates into a plainer, more in-memory type,
-until the core speaks only its own domain types. Use this instead of the full loop when the point
-isn't the cycle itself but which layer is allowed to know about the platform.
+until the core speaks only its own domain types and imports nothing from outside. A layer can
+respect [Layered Architecture](../../layered-architecture/README.md)'s dependency direction and
+still fail this — a platform type passed straight through as a parameter is a vocabulary leak even
+when the import graph points the right way.
 
 ```
  ┌──────────────────────────────────────────────────────────┐

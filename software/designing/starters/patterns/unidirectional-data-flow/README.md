@@ -44,10 +44,12 @@ Drawn as a loop — state down, events up:
 └──────────────────────────────────────────┘
 ```
 
-### [Vocabulary Funnel](./blocks/vocabulary-funnel.md), optional
+## Related
 
-**For this starter:** an abridged form of the loop above. Use it instead when the point is which
-layer is allowed to know about the platform, not the cycle itself.
+The state holder and UI here are usually the outermost layer of a
+[Vocabulary Boundary](../vocabulary-boundary/README.md) funnel — this diagram doesn't draw what
+vocabulary either side speaks, only that state and events are the only things crossing between
+them.
 
 ## Pitfalls
 

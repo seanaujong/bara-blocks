@@ -41,12 +41,13 @@ boxes; adds only the order.
 > 3. Four hooks derive cheap view data from it.
 > 4. The frame renders.
 
-### [Unidirectional Data Flow](../../../designing/starters/patterns/unidirectional-data-flow/README.md) or [Layered Architecture](../../../designing/starters/patterns/layered-architecture/README.md), optional
+### [Unidirectional Data Flow](../../../designing/starters/patterns/unidirectional-data-flow/README.md), [Layered Architecture](../../../designing/starters/patterns/layered-architecture/README.md), or [Vocabulary Boundary](../../../designing/starters/patterns/vocabulary-boundary/README.md), optional
 
 **For this starter:** reach for one of these instead of (or alongside) Component/Dynamic when the
-shape worth drawing is the state/event loop itself, or the layer-dependency rule the
-[Discipline](./blocks/discipline.md) block below states in prose — a picture of "no upward
-imports" is a stronger claim than the sentence.
+shape worth drawing is a standing contract rather than the boxes themselves — the state/event loop
+itself, the layer-dependency rule the [Discipline](./blocks/discipline.md) block below states in
+prose (a picture of "no upward imports" is a stronger claim than the sentence), or which layer a
+given type is even allowed to appear in.
 
 ### [Layer Responsibilities](./blocks/layer-responsibilities.md)
 

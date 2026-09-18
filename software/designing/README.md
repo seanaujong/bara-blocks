@@ -5,8 +5,8 @@
 > it (Context), what gets deployed (Container), how are its modules used and wired together
 > (Component) — plus how a specific scenario plays out at runtime (Dynamic) and where it actually
 > runs (Deployment). Alongside it sit a few **Patterns** — smaller, single-diagram idioms that
-> answer a different question C4 doesn't: not "what are the boxes," but "what runtime contract or
-> vocabulary boundary holds between them, on every frame."
+> answer questions C4 doesn't: not "what are the boxes," but what standing contract or vocabulary
+> rule holds between them, on every frame or at every layer boundary.
 
 ## Starters
 
@@ -36,6 +36,9 @@ contract itself rather than the boxes:
 - **[Layered Architecture](./starters/patterns/layered-architecture/README.md)** — a fixed
   dependency direction between layers (UI → Domain → Data), with state and events flowing back up
   the opposite way.
+- **[Vocabulary Boundary](./starters/patterns/vocabulary-boundary/README.md)** — which type
+  vocabulary is legal at each layer, narrowing from the platform's types at the edge to plain
+  domain types at the core.
 
 ## Blocks
 

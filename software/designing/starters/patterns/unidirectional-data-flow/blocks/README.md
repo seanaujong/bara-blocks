@@ -5,4 +5,3 @@ other starter.
 
 - [State](./state.md)
 - [Event](./event.md)
-- [Vocabulary Funnel](./vocabulary-funnel.md)

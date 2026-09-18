@@ -41,6 +41,13 @@ up is the one thing this diagram exists to rule out.
 └────────────────────────────────────────────────┘
 ```
 
+## Related
+
+The same layer stack, with the arrows meaning something different, is a
+[Vocabulary Boundary](../vocabulary-boundary/README.md) diagram — that one states which types are
+legal at each depth, not who may import whom. A layer can pass this diagram and still fail that
+one.
+
 ## Pitfalls
 
 - Skipping the Domain layer's optionality note — for a simple screen, UI talking directly to Data
@@ -51,3 +58,6 @@ up is the one thing this diagram exists to rule out.
   [Component](../../c4/component/README.md) diagram — those show arbitrary many-to-many wiring;
   this shows one rule (dependencies point one way) that a Container/Component diagram doesn't
   itself enforce.
+- Treating this diagram as proof a [Vocabulary Boundary](../vocabulary-boundary/README.md) holds
+  too — a function can respect the dependency direction and still accept a platform type as a
+  parameter.
