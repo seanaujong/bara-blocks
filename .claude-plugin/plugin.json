@@ -1,7 +1,7 @@
 {
   "name": "bara-blocks",
   "description": "Building blocks for writing essays and software documents, organized as domain -> type -> block.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Sean Au Jong"
   }
