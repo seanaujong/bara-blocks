@@ -25,10 +25,35 @@ latency number works just as well for a backend change.
 
 > Before: the kiosk shows only "Checked out." After: it also shows "You have a $2.50 fine."
 
-### One supporting visual from software/designing/
+### Walkthrough
 
-The supporting visual from `software/designing/` gives the reviewer a clear view of
-the systems being affected and how they relate to each other.
+**For this starter:** only when the change gives someone something new to do — a short
+walkthrough in that reader's terms, not the implementation's. For a developer, what they write,
+what they get back, and what they can now add, using the [Step](../../blocks/body/step.md) and
+[Code Snippet](../../blocks/body/code-snippet.md) blocks the way a
+[Developer Guide](../developer-guide/README.md) does. For a customer, what they do and see, step
+by step, the way a [Product Walkthrough](../product-walkthrough/README.md) does.
+
+> "1. Scan a book with your library card. 2. Under 'Checked out.' the screen now shows 'You have
+> a $2.50 fine.'"
+
+### Supporting visuals from software/designing/
+
+**For this starter:** one visual per structural claim the change makes, and none when it makes
+none — a change that both crosses deployables and moves code between layers gets both diagrams,
+not the more important one. Each claim has its own diagram:
+
+- The change spans more than one deployable or runtime hop → a
+  [Deployment](../../../designing/starters/c4/deployment/README.md) or
+  [Container](../../../designing/starters/c4/container/README.md) diagram, with the changed
+  relationship marked.
+- The change moves code between layers, or splits one thing into siblings → a
+  [Layered Architecture](../../../designing/starters/patterns/layered-architecture/README.md)
+  diagram, each layer drawn as a band and mapped to what moves into or out of it.
+- The change alters a request or interaction sequence → a
+  [Dynamic](../../../designing/starters/c4/dynamic/README.md) diagram of the new order.
+
+Don't force one in: a change that makes no structural claim needs no visual.
 
 ### [Code Snippet](../../blocks/body/code-snippet.md)
 
