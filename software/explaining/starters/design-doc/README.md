@@ -35,7 +35,8 @@ almost always does. Tagged, so the Contrasts and the Decision can cite them.
 it.
 
 > - **Running cost** — maintenance is left out [PITCH]; it's $1,200 a year per kiosk against
->   $38,000 for a second staffed register [COSTS].
+>   $38,000 for a second staffed register [COSTS]. Ruling: COSTS — finance owns the numbers, and
+>   PITCH was written to win budget.
 
 ### [Decision and Rationale](../../blocks/opening/decision-and-rationale.md)
 

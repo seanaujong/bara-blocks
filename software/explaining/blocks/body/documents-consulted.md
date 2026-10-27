@@ -7,8 +7,9 @@ document backs a sentence without turning back to the list. A plan that names it
 reviewer check what it looked at; one that doesn't asks to be taken on faith.
 
 Each entry gives four things: a tag; the document, anchored by name or path; its claim, as one
-sentence that could be false; and a sourcing note — who wrote it, for what, and how current it is.
-A pitch written to win budget omits costs; a spec written before a rewrite describes code that no
+sentence that could be false; and a sourcing note — who wrote it, for whom, to get what done, and
+how current it is (the history classroom's HIPP: historical context, intended audience, purpose,
+point of view). A pitch written to win budget omits costs; a spec written before a rewrite describes code that no
 longer exists; the code and its tests outrank prose about them. The sourcing note is what tells the
 reader how far to trust the claim.
 
