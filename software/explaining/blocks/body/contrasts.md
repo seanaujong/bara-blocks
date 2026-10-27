@@ -8,7 +8,13 @@ summarizing each in turn doesn't.
 
 The ruling's rule is the part a reviewer can push back on, so state it. In software, one pair of
 rules settles most contrasts: on what *is* true, the running artifact — code, config, data — beats
-any document about it; on what *should* be true, the decision record beats the code. Others recur:
+any document about it; on what *should* be true, the decision record beats the code. When one
+document says what *is* and another what *should* be, they are not in conflict, and ruling for
+either goes wrong: the artifact waves the plan through, and the decision record denies something
+that really exists. Split the question into two contrasts, one of each kind. The gap between their
+rulings is what the plan has to decide — close it, or keep it and say why. Two kiosks installed
+[INVENT] against a board minute allowing no new ones [POLICY] become *Kiosks installed today*
+(INVENT) and *New kiosks* (POLICY); the plan keeps the two and adds none. Others recur:
 the owner of a fact beats a bystander, a primary record beats a later account, and a document that
 restates another counts once.
 
