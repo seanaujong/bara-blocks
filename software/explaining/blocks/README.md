@@ -14,6 +14,8 @@
 - [Before/After](body/before-after.md)
 - [Code Snippet](body/code-snippet.md)
 - [Interface](body/interface.md)
+- [Case Table](body/case-table.md)
+- [Neighbors](body/neighbors.md)
 - [Documents Consulted](body/documents-consulted.md)
 - [Contrasts](body/contrasts.md)
 
