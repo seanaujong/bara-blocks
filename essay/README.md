@@ -17,6 +17,7 @@
   - **[Definition](./starters/expository/definition/README.md)** — establishes what a term actually means.
 - **[Persuasive / Argumentative](./starters/persuasive/README.md)** — argues for a position, or moves the reader to act.
 - **[Literary Analysis](./starters/literary-analysis/README.md)** — argues for an interpretation of a text.
+- **[Document-Based](./starters/document-based/README.md)** — argues a thesis weighed out of a set of source documents, like an AP history DBQ.
 
 ## Blocks
 

@@ -1,7 +1,8 @@
 # Documents Consulted
 
 Every document the writing drew on, each tagged and each with the one claim it contributed — the
-shape of an AP history DBQ, where the argument is built from a stack of sources rather than
+shape of an AP history DBQ (the
+[Document-Based Essay](../../../../essay/starters/document-based/README.md)), where the argument is built from a stack of sources rather than
 asserted. The rest of the document cites them by tag, [PITCH][COSTS], so a reader can tell which
 document backs a sentence without turning back to the list. A plan that names its sources lets a
 reviewer check what it looked at; one that doesn't asks to be taken on faith.
