@@ -19,6 +19,18 @@ instead of) the fuller decision and rationale later in the doc.
 > "Checking out a book requires a staffed register, which bottlenecks at peak hours and doesn't
 > scale to more branches without adding staff."
 
+### [Case Table](../../blocks/body/case-table.md), optional
+
+**For this starter:** the cases any option has to handle, with one column per option marking
+which rows it covers or can't express — so the decision is judged row by row, and an option that
+answers a different question shows up as a column of "can't express."
+
+> | Checkout at peak hours         | Self-checkout kiosk | Second staffed register |
+> | ------------------------------ | ------------------- | ----------------------- |
+> | One item, no fine              | covers              | covers                  |
+> | Item with an unpaid fine       | covers              | covers                  |
+> | Branch with no spare staff     | covers              | can't express           |
+
 ### [Documents Consulted](../../blocks/body/documents-consulted.md), optional
 
 **For this starter:** when the proposal draws on existing docs, code, or research — an agent's plan
@@ -35,7 +47,8 @@ almost always does. Tagged, so the Contrasts and the Decision can cite them.
 it.
 
 > - **Running cost** — maintenance is left out [PITCH]; it's $1,200 a year per kiosk against
->   $38,000 for a second staffed register [COSTS].
+>   $38,000 for a second staffed register [COSTS]. Ruling: COSTS — finance owns the numbers, and
+>   PITCH was written to win budget.
 
 ### [Decision and Rationale](../../blocks/opening/decision-and-rationale.md)
 

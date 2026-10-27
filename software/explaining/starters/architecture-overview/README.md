@@ -30,6 +30,13 @@ pick Container if the system spans several deployable pieces.
 > See [designing/starters/c4/component](../../../designing/starters/c4/component/README.md) for the
 > block vocabulary this diagram is built from — Component, Container, Relationship.
 
+### [Neighbors](../../blocks/body/neighbors.md), optional
+
+**For this starter:** what sits outside the diagram above — the libraries a contributor already
+knows — with the edges that don't exist marked, so the layers aren't read as wrapping them.
+
+> "Fines Repository" —✕ no import, either direction→ "Checkout SDK"
+
 ### [Dynamic](../../../designing/starters/c4/dynamic/README.md), optional
 
 **For this starter:** a numbered trace of the single most common runtime path through the layers

@@ -59,7 +59,8 @@ document's shape:
    If the draft draws on source documents — a plan built from existing docs, code, or research —
    list them first as [Documents Consulted](../../software/explaining/blocks/body/documents-consulted.md),
    one claim each, then the [Contrasts](../../software/explaining/blocks/body/contrasts.md)
-   between them, and cite both — documents by tag, contrasts by name — wherever the draft decides something. Do this
+   between them, each with a ruling. Cite both wherever the draft decides something — documents
+   by tag, contrasts by name — and label any point that cites neither as an assumption. Do this
    even when the starter doesn't list them: the comparison is what justifies the decision.
 
 5. **Then browse the wider blocks catalog for anything else that would help.** The
