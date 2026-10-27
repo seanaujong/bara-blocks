@@ -56,6 +56,12 @@ document's shape:
    the order given. A "For this starter" note says how to write that block for this
    document (its register, its content).
 
+   If the draft draws on source documents — a plan built from existing docs, code, or research —
+   list them first as [Documents Consulted](../../software/explaining/blocks/body/documents-consulted.md),
+   one claim each, then the [Contrasts](../../software/explaining/blocks/body/contrasts.md)
+   between them, and cite both — documents by tag, contrasts by name — wherever the draft decides something. Do this
+   even when the starter doesn't list them: the comparison is what justifies the decision.
+
 5. **Then browse the wider blocks catalog for anything else that would help.** The
    starter's list is a starting point, not a fence — blocks are usable at your discretion
    wherever they strengthen the primary claim. Check the domain's shared glossary
