@@ -23,6 +23,11 @@ document to decompose it into its primary claim, secondary claims, and evidence,
 structure against the catalog. Claude Code may also reach for either on its own when a task
 clearly calls for it, but don't count on that alone.
 
+Run `/perspectives <feature>` for a requirements pass: it predicts how each perspective meets one
+feature (the customer using it, the business measuring it, the maintainers evolving it, other
+teams extending it), cross-examines them until every tension has a decider, and publishes the
+result as an interactive page. It only runs when you ask for it.
+
 **Want Claude Code to reach for one more consistently, without asking each time?** Tell it once.
 Add a note to your memory (or `CLAUDE.md`) that states this as a standing preference, not a
 maybe — something like:
