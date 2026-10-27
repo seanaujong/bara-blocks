@@ -1,16 +1,19 @@
 # Documents Consulted
 
 Every document the writing drew on, each tagged and each with the one claim it contributed — the
-shape of an AP history DBQ, where the argument is built from a stack of sources rather than
-asserted. The rest of the document cites them by tag, [PITCH][COSTS], so a reader can tell which
-document backs a sentence without turning back to the list. A plan that names its sources lets a
-reviewer check what it looked at; one that doesn't asks to be taken on faith.
+shape of an AP history DBQ (the [Document-Based
+Essay](../../../../essay/starters/document-based/README.md)), where the argument is built from a
+stack of sources rather than asserted. The rest of the document cites them by tag, [PITCH][COSTS],
+so a reader can tell which document backs a sentence without turning back to the list. A plan that
+names its sources lets a reviewer check what it looked at; one that doesn't asks to be taken on
+faith.
 
 Each entry gives four things: a tag; the document, anchored by name or path; its claim, as one
-sentence that could be false; and a sourcing note — who wrote it, for what, and how current it is.
-A pitch written to win budget omits costs; a spec written before a rewrite describes code that no
-longer exists; the code and its tests outrank prose about them. The sourcing note is what tells the
-reader how far to trust the claim.
+sentence that could be false; and a sourcing note — who wrote it, for whom, to get what done, and
+how current it is (the history classroom's HIPP: historical context, intended audience, purpose,
+point of view). A pitch written to win budget omits costs; a spec written before a rewrite describes
+code that no longer exists; the code and its tests outrank prose about them. The sourcing note is
+what tells the reader how far to trust the claim.
 
 A tag is two to six capital letters, unique within the document, like a pro team's tag on a
 scoreboard. Name what the document *is*, not where it's filed — `SURVEY`, not `DOC3` or `MD` — and
