@@ -25,5 +25,6 @@
 ## Blocks
 
 **[blocks/](./blocks/README.md)** is the shared glossary — Problem Statement, Step,
-Before/After, Code Snippet, Interface, Documents Consulted, Contrasts, Decision and Rationale,
-Summary — each described once here rather than re-explained on every starter's page.
+Before/After, Code Snippet, Interface, Case Table, Neighbors, Documents Consulted, Contrasts,
+Decision and Rationale, Summary — each described once here rather than re-explained on every
+starter's page.

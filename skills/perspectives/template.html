@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SLOT: page title, the same sentence as the footer h1</title>
+<!--
+  perspectives template. Copy this file, then fill every SLOT with real text in the HTML:
+  JavaScript only navigates, so the page's content stays readable and diffable as source.
+
+  Contract anything tracking this page reads:
+    each requirement is an <article class="sub req"> with
+      data-req          ticket key or URL, or "none"; "none" renders the no-ticket badge and the tab count
+      data-slug         stable handle, never renamed once published (perspective prefix: cust-, biz-, maint-, int-)
+      data-perspective  customer | business | maintainers | integrators
+    each tension is an <article class="tension" data-tension="<slug>">; each proposed ticket a <tr data-proposed="<slug>">.
+
+  Repeat a marked block to add an item; delete one you do not need. One <article class="sub"> = one sub-tab;
+  its data-name is the pill label. Panels are grid-stacked, so every tab is as tall as the tallest: keep each
+  sub-tab to about one screen. Keys: 1-9 tabs, Option+digit sub-tabs, arrows step.
+
+  Variant, when the feature is a design replacing a current state: tabs become Overview / Today / With <design> /
+  Tensions, and the sub-tabs under Today and With <design> are the audiences (for example feature developers,
+  product managers, platform developers), so each audience reads the two states side by side.
+
+  Publish as a complete document, and keep state in memory: browser storage can throw in an artifact sandbox.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,650&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one screen. Tab row on top, sub-tab row under it, panels grid-stacked so every tab keeps the same height; title and status in the footer. */
+:root {
+  --bg: #f4f6f9; --surface: #ffffff; --ink: #18202b; --muted: #5a6473; --line: #d7dce4; --accent: #2f5fd0;
+  --find: #a65f00; --find-bg: #fdf3e3; --ok: #2f8a55; --slot: #eef1f6;
+  --f-display: "Literata", Georgia, "Times New Roman", serif;
+  --f-body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11151c; --surface: #19202a; --ink: #e5e9ef; --muted: #9aa4b3; --line: #2c3542; --accent: #7fa3f5;
+  --find: #f0a94a; --find-bg: #2e2416; --ok: #62c48c; --slot: #212a36;
+  color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11151c; --surface: #19202a; --ink: #e5e9ef; --muted: #9aa4b3; --line: #2c3542; --accent: #7fa3f5;
+  --find: #f0a94a; --find-bg: #2e2416; --ok: #62c48c; --slot: #212a36;
+  color-scheme: dark }
+
+* { box-sizing: border-box; }
+html { font-size: 15px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 var(--f-body); }
+.wrap { max-width: 1440px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 32px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 650; margin: 0; text-wrap: balance; }
+h2 { font-size: 1.3rem; line-height: 1.25; }
+h3 { font-size: 1rem; line-height: 1.3; }
+p { margin: 0; }
+a { color: var(--accent); }
+code, .mono { font-family: var(--f-mono); font-size: 0.82em; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Tabs */
+nav.tabs { display: flex; flex-wrap: wrap; gap: 2px; border-bottom: 1px solid var(--line); position: sticky; top: env(safe-area-inset-top, 0px); background: var(--bg); z-index: 5; padding-top: 4px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+button.tab { all: unset; cursor: pointer; padding: 7px 13px; font-weight: 600; font-size: 0.9rem; color: var(--muted); border-bottom: 2px solid transparent; margin-bottom: -1px; border-radius: 6px 6px 0 0; }
+button.tab:hover { color: var(--ink); background: var(--surface); }
+button.tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+button.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+kbd.k { font-family: var(--f-mono); font-size: 0.66rem; font-weight: 500; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; margin-left: 6px; vertical-align: 1px; background: var(--bg); }
+.tab .count { font-size: 0.72rem; font-weight: 600; color: var(--find); margin-left: 6px; }
+
+/* Grid-stacked panels: every panel shares one cell, so height is the tallest panel's and never jumps. */
+.stack { display: grid; }
+.stack > * { grid-area: 1 / 1; min-width: 0; }
+.stack > :not(.on) { visibility: hidden; }
+
+/* Sub-tab row */
+.subnav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; }
+button.step { all: unset; cursor: pointer; width: 32px; height: 32px; display: grid; place-items: center; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); font-size: 1.05rem; font-weight: 700; }
+button.step:hover { border-color: var(--accent); }
+.pills { display: inline-flex; flex-wrap: wrap; gap: 3px; padding: 3px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; }
+button.pill { all: unset; cursor: pointer; padding: 5px 12px; border-radius: 999px; font-size: 0.84rem; font-weight: 600; color: var(--muted); }
+button.pill:hover { color: var(--ink); }
+button.pill[aria-selected="true"] { background: var(--accent); color: var(--surface); }
+.pos { font-size: 0.8rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* Requirement tile */
+.req { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 11px 13px 13px; display: grid; gap: 10px; align-content: start; }
+.req-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.req-head h2 { flex: 1 1 520px; }
+.ids { display: inline-flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.ticket { font-family: var(--f-mono); font-size: 0.72rem; font-weight: 500; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); white-space: nowrap; }
+.ticket.none { color: var(--find); border-color: var(--find); background: var(--find-bg); }
+.slug { font-family: var(--f-mono); font-size: 0.7rem; color: var(--muted); }
+.claim { font-size: 0.98rem; max-width: 110ch; }
+.pred { font-size: 0.64rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); border: 1px dashed var(--muted); border-radius: 999px; padding: 0 6px; vertical-align: 1px; white-space: nowrap; }
+.find { color: var(--find); font-weight: 600; }
+.actor { font-size: 0.86rem; color: var(--muted); }
+.actor b { color: var(--ink); font-weight: 600; }
+
+/* Use-case steps with screenshot slots */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+.steps li { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.shot { height: 118px; border: 1.5px dashed var(--line); border-radius: 12px; background: var(--slot); display: grid; place-items: center; padding: 8px; text-align: center; font-size: 0.74rem; color: var(--muted); line-height: 1.3; }
+.shot::before { content: "screenshot"; display: block; font-size: 0.6rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin-bottom: 2px; }
+.sn { font-family: var(--f-mono); font-size: 0.72rem; color: var(--accent); font-weight: 500; }
+.stxt { font-size: 0.88rem; font-weight: 600; }
+.tap { font-size: 0.78rem; color: var(--muted); }
+.tap::before { content: "→ "; font-weight: 600; color: var(--ink); }
+.ext { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 22px; margin: 0; padding: 0; list-style: none; font-size: 0.85rem; }
+.ext li { min-width: 0; }
+.ext b { font-family: var(--f-mono); font-size: 0.76rem; color: var(--accent); margin-right: 6px; }
+.src { font-size: 0.74rem; color: var(--muted); overflow-wrap: anywhere; }
+@media (max-width: 760px) { .ext { grid-template-columns: 1fr; } }
+
+/* Funnel */
+ol.funnel { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(150px, 1fr)); gap: 8px; min-width: 1080px; }
+.fs { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--ok); border-radius: 10px; padding: 8px 10px; display: grid; gap: 5px; align-content: start; position: relative; }
+.fs.gap { border-top-color: var(--find); background: var(--find-bg); }
+.fs .stage { font-size: 0.64rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); }
+.fs .signal { font-size: 0.84rem; font-weight: 600; overflow-wrap: anywhere; }
+.fs.gap .signal { color: var(--find); }
+.fs .note { font-size: 0.76rem; color: var(--muted); overflow-wrap: anywhere; }
+.fs .who { font-size: 0.74rem; }
+.fs .who::before { content: "read by "; color: var(--muted); }
+.scroll { overflow-x: auto; padding-bottom: 2px; }
+
+/* Field strip */
+.fields { display: flex; flex-wrap: wrap; gap: 6px; }
+.field { font-family: var(--f-mono); font-size: 0.76rem; padding: 3px 9px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); }
+.field i { font-style: normal; color: var(--muted); margin-right: 4px; }
+.field.absent { border-style: dashed; border-color: var(--find); color: var(--find); background: var(--find-bg); }
+.fieldrow { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 10px; align-items: start; }
+.fieldrow > span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); padding-top: 5px; }
+
+/* Tables */
+table.t { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+table.t th { text-align: left; font-size: 0.68rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); font-weight: 700; padding: 4px 10px 6px 0; border-bottom: 1px solid var(--line); }
+table.t td { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+table.t tr:last-child td { border-bottom: 0; }
+table.t td:first-child { font-weight: 600; }
+.chip-u { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--find); border: 1px solid var(--find); background: var(--find-bg); border-radius: 999px; padding: 0 7px; white-space: nowrap; }
+
+/* Two columns */
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; align-items: start; }
+@media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+
+/* Recipe */
+ol.recipe { margin: 0; padding-left: 20px; display: grid; gap: 5px; font-size: 0.9rem; }
+.involve { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 0.8rem; }
+.involve > span:first-child { font-size: 0.68rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; color: var(--muted); }
+.team { font-family: var(--f-mono); font-size: 0.74rem; padding: 1px 8px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); }
+pre.code { margin: 0; font: 0.78rem/1.5 var(--f-mono); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; overflow-x: auto; }
+.cmt { color: var(--muted); }
+
+/* Tensions */
+.tgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 1000px) { .tgrid { grid-template-columns: 1fr; } }
+.tension { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 8px; align-content: start; }
+.side { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 8px; font-size: 0.85rem; }
+.side > span { font-size: 0.66rem; text-transform: uppercase; letter-spacing: .07em; font-weight: 700; color: var(--muted); padding-top: 3px; }
+.vs { font-size: 0.66rem; font-weight: 700; letter-spacing: .1em; color: var(--muted); text-align: center; border-block: 1px solid var(--line); line-height: 1; padding: 2px 0; }
+.decide { font-size: 0.9rem; font-weight: 600; }
+.decide::before { content: "Decide: "; color: var(--accent); }
+.decider { font-size: 0.82rem; }
+.decider::before { content: "Decider: "; font-weight: 700; color: var(--muted); }
+
+.lead { display: grid; gap: 4px; margin-bottom: 4px; }
+
+/* Deployments diagram */
+figure.deploy { margin: 0; display: grid; gap: 6px; }
+figure.deploy svg { display: block; width: 100%; max-width: 1200px; min-width: 860px; height: auto; font-family: var(--f-body); }
+.d-box { fill: var(--surface); stroke-width: 1.4; }
+.d-live { stroke: var(--ink); }
+.d-new { stroke: var(--ink); stroke-dasharray: 6 4; }
+.d-legacy { stroke: var(--muted); fill: var(--bg); stroke-dasharray: 2 3; }
+.d-group { fill: none; stroke: var(--accent); stroke-width: 2.4; }
+.d-col { fill: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+.d-t { fill: var(--ink); font-size: 13.5px; font-weight: 700; font-family: var(--f-mono); }
+.d-gt { fill: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+.d-m { fill: var(--ink); font-size: 11.5px; font-family: var(--f-mono); }
+.d-s { fill: var(--muted); font-size: 11.5px; }
+.d-mut { fill: var(--muted); }
+.d-l { fill: var(--ink); font-size: 11px; font-weight: 600; }
+.d-edge { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+.d-dash { stroke-dasharray: 5 4; }
+.d-findl { stroke: var(--find); }
+.d-findt { fill: var(--find); }
+.d-head { fill: var(--ink); }
+.d-headf { fill: var(--find); }
+.d-headm { fill: var(--muted); }
+.d-medge { stroke: var(--muted); }
+.d-acc { fill: var(--accent); }
+figure.deploy figcaption { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.76rem; color: var(--muted); }
+.lg { display: inline-flex; align-items: center; gap: 6px; }
+.lg i { display: inline-block; width: 18px; height: 10px; border-radius: 3px; border: 1.5px solid var(--ink); }
+.lg i.lg-new { border-style: dashed; }
+.lg i.lg-legacy { border: 1.5px dotted var(--muted); background: var(--bg); }
+.lg i.lg-shared { border: 2px solid var(--accent); }
+.lg i.lg-fix { border: 0; border-top: 2px dashed var(--find); height: 0; border-radius: 0; }
+
+footer { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 12px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 10px 32px; }
+footer h1 { font-size: 1.45rem; line-height: 1.2; }
+footer .subtitle { color: var(--muted); font-size: 0.92rem; margin-top: 4px; }
+footer .status { font-size: 0.9rem; }
+footer .status .ask { font-weight: 600; margin-top: 6px; }
+footer .srcs { font-size: 0.76rem; color: var(--muted); margin-top: 6px; }
+@media (max-width: 900px) { footer { grid-template-columns: 1fr; } }
+@media (max-width: 900px), (hover: none) { kbd.k { display: none; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Host cards: the same goal on each host, side by side; a filled screenshot slot is a figure.shot.img. */
+.hosts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+.host { display: grid; gap: 6px; align-content: start; min-width: 0; }
+.hname { font-size: 0.8rem; font-weight: 700; }
+.host .shot { height: 150px; }
+figure.shot.img { height: auto; padding: 0; background: none; border: 1px solid var(--line); display: grid; gap: 4px; margin: 0; overflow: hidden; }
+figure.shot.img::before { content: none; }
+figure.shot.img img { display: block; width: 100%; height: 220px; object-fit: contain; object-position: top; background: #fff; }
+figure.shot.img figcaption { font-size: 0.7rem; color: var(--muted); padding: 2px 8px 6px; text-align: left; }
+ol.hsteps { margin: 0; padding-left: 18px; display: grid; gap: 3px; font-size: 0.86rem; }
+.nopath { font-size: 0.9rem; color: var(--find); font-weight: 600; }
+.nopath::before { content: "No path today: "; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="tabs" role="tablist" aria-label="Perspectives">
+  <button class="tab" role="tab" id="tab-customer" data-t="customer" aria-selected="true">Customer<kbd class="k">1</kbd></button>
+  <button class="tab" role="tab" id="tab-business" data-t="business" aria-selected="false">Business<kbd class="k">2</kbd></button>
+  <button class="tab" role="tab" id="tab-maintainers" data-t="maintainers" aria-selected="false">Maintainers<kbd class="k">3</kbd></button>
+  <button class="tab" role="tab" id="tab-integrators" data-t="integrators" aria-selected="false">Integrators<kbd class="k">4</kbd></button>
+  <button class="tab" role="tab" id="tab-tensions" data-t="tensions" aria-selected="false">Tensions<kbd class="k">5</kbd></button>
+  <button class="tab" role="tab" id="tab-tickets" data-t="tickets" aria-selected="false">Proposed tickets<kbd class="k">6</kbd></button>
+</nav>
+
+<div class="stack" id="panels">
+
+<!-- ============ CUSTOMER: one use case per sub-tab ============ -->
+<section class="panel on" data-t="customer" role="tabpanel" aria-labelledby="tab-customer">
+  <div class="subnav"><button class="step prev" aria-label="Previous">‹</button><div class="pills" role="tablist"></div><button class="step next" aria-label="Next">›</button><span class="pos"></span></div>
+  <div class="stack subs">
+
+    <!-- BLOCK: use case on one host. Steps are cards with a screenshot slot each; extensions number off their step. -->
+    <article class="sub req on" data-name="SLOT pill label" data-perspective="customer" data-req="none" data-slug="cust-SLOT">
+      <div class="req-head"><h2><!-- SLOT: header, "<actor> should <action>" --></h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">cust-SLOT</span></span></div>
+      <p class="claim"><!-- SLOT: the one sentence --></p>
+      <p class="actor"><b>Actor and goal:</b> <!-- SLOT --></p>
+      <ol class="steps">
+        <!-- BLOCK: step. An empty slot names what the capture must show; a captured one is <figure class="shot img"><img alt="…" src="data:…"><figcaption>…</figcaption></figure>. -->
+        <li><div class="shot"><!-- SLOT: what the screenshot shows --></div><span class="sn">1</span><span class="stxt"><!-- SLOT: what the person does --></span><span class="tap"><!-- SLOT: where the action leads; delete the span if it leads nowhere new --></span></li>
+      </ol>
+      <ul class="ext">
+        <!-- BLOCK: extension. One with no known outcome says so: <span class="find">no stated outcome</span>. Unsourced: <span class="pred">predicted</span>. -->
+        <li><b>1a</b><!-- SLOT --></li>
+      </ul>
+      <p class="src"><!-- SLOT: sources, path:line · doc · ticket --></p>
+    </article>
+
+    <!-- BLOCK: one goal across hosts. One card per host, side by side, so screenshots use the horizontal space. -->
+    <article class="sub req" data-name="SLOT pill label" data-perspective="customer" data-req="none" data-slug="cust-SLOT-hosts">
+      <div class="req-head"><h2><!-- SLOT --></h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">cust-SLOT-hosts</span></span></div>
+      <p class="claim"><!-- SLOT --></p>
+      <div class="hosts">
+        <!-- BLOCK: host card. Name hosts the way readers know them (web, iOS, Android, CLI). -->
+        <div class="host"><div class="hname"><!-- SLOT: host --></div><div class="shot"><!-- SLOT: what the screenshot shows --></div><ol class="hsteps"><li><!-- SLOT: step --></li></ol></div>
+      </div>
+      <p class="src"><!-- SLOT --></p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ BUSINESS: the funnel, then what each signal can join on ============ -->
+<section class="panel" data-t="business" role="tabpanel" aria-labelledby="tab-business">
+  <div class="subnav"><button class="step prev" aria-label="Previous">‹</button><div class="pills" role="tablist"></div><button class="step next" aria-label="Next">›</button><span class="pos"></span></div>
+  <div class="stack subs">
+
+    <!-- BLOCK: funnel. One li per stage, exposure first, the outcome the feature exists for last; a stage nothing measures is li.fs.gap. Set the grid's column count in ol.funnel to the stage count. -->
+    <article class="sub req on" data-name="Funnel" data-perspective="business" data-req="none" data-slug="biz-funnel-coverage">
+      <div class="req-head"><h2><!-- SLOT --></h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">biz-funnel-coverage</span></span></div>
+      <p class="claim"><!-- SLOT --></p>
+      <div class="scroll"><ol class="funnel">
+        <li class="fs"><span class="stage"><!-- SLOT: stage --></span><span class="signal"><!-- SLOT: the signal that measures it (event, metric, row, check) --></span><span class="note"><!-- SLOT: join key · where it is defined --></span><span class="who"><!-- SLOT: who reads it (product, analytics, leadership), from a dashboard or alert, else predicted --></span></li>
+        <li class="fs gap"><span class="stage"><!-- SLOT --></span><span class="signal">not measured</span><span class="note"><!-- SLOT --></span><span class="who"><!-- SLOT --></span></li>
+      </ol></div>
+    </article>
+
+    <!-- BLOCK: signal fields. The finding is usually a missing join key, so list the fields, not only the name. -->
+    <article class="sub req" data-name="SLOT pill label" data-perspective="business" data-req="none" data-slug="biz-SLOT">
+      <div class="req-head"><h2><!-- SLOT --></h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">biz-SLOT</span></span></div>
+      <p class="claim"><!-- SLOT --></p>
+      <div class="fieldrow"><span>Present</span><div class="fields"><span class="field"><i>1</i><!-- SLOT: field --></span></div></div>
+      <div class="fieldrow"><span>Missing</span><div class="fields"><span class="field absent"><!-- SLOT: the join key it needs --></span></div></div>
+      <p class="src"><!-- SLOT --></p>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ MAINTAINERS: the deployments picture, then changes with their seams and guards ============ -->
+<section class="panel" data-t="maintainers" role="tabpanel" aria-labelledby="tab-maintainers">
+  <div class="subnav"><button class="step prev" aria-label="Previous">‹</button><div class="pills" role="tablist"></div><button class="step next" aria-label="Next">›</button><span class="pos"></span></div>
+  <div class="stack subs">
+
+    <!-- BLOCK: deployments diagram, inline SVG with the d-* classes (d-live on main, d-new to build, d-legacy left alone, d-group the owning deployment). Draw it with the artifact-diagramming skill. -->
+    <article class="sub req on" data-name="Deployments" data-perspective="maintainers" data-req="none" data-slug="maint-SLOT">
+      <div class="req-head"><h2><!-- SLOT --></h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">maint-SLOT</span></span></div>
+      <p class="claim"><!-- SLOT --></p>
+      <figure class="deploy">
+        <div class="scroll"><!-- SLOT: <svg viewBox="…" role="img" aria-label="…">…</svg> --></div>
+        <figcaption><span class="lg"><i></i>on main</span><span class="lg"><i class="lg-new"></i>to build</span><span class="lg"><i class="lg-legacy"></i>legacy, left alone</span><span class="lg"><i class="lg-shared"></i>owning deployment</span></figcaption>
+      </figure>
+      <p class="src"><!-- SLOT --></p>
+    </article>
+
+    <!-- BLOCK: changes table. Add an "App versions" column only when stored data or a shipped client outlives the change. -->
+    <article class="sub req" data-name="SLOT pill label" data-perspective="maintainers" data-req="none" data-slug="maint-SLOT-changes">
+      <div class="req-head"><h2><!-- SLOT: "<owning team> should be able to change X without breaking Y" --></h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">maint-SLOT-changes</span></span></div>
+      <p class="claim"><!-- SLOT --></p>
+      <div class="scroll"><table class="t">
+        <tr><th>Change <span class="pred">predicted</span></th><th>Seam</th><th>Invariant</th><th>Guard</th></tr>
+        <tr><td><!-- SLOT --></td><td><!-- SLOT: file and function on the default branch --></td><td><!-- SLOT --></td><td><!-- SLOT: the test, check or floor; none is <span class="chip-u">unguarded</span> --></td></tr>
+      </table></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ INTEGRATORS: one recipe per team and outcome ============ -->
+<section class="panel" data-t="integrators" role="tabpanel" aria-labelledby="tab-integrators">
+  <div class="subnav"><button class="step prev" aria-label="Previous">‹</button><div class="pills" role="tablist"></div><button class="step next" aria-label="Next">›</button><span class="pos"></span></div>
+  <div class="stack subs">
+
+    <!-- BLOCK: recipe. Use real symbols; a code sample goes in <pre class="code">. -->
+    <article class="sub req on" data-name="SLOT pill label" data-perspective="integrators" data-req="none" data-slug="int-SLOT">
+      <div class="req-head"><h2>If <!-- SLOT: team --> wants <!-- SLOT: outcome -->, then:</h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">int-SLOT</span></span></div>
+      <p class="claim"><!-- SLOT --></p>
+      <ol class="recipe"><li><!-- SLOT: step --></li></ol>
+      <div class="involve"><span>Involve</span><span class="team"><!-- SLOT: team or person --></span> <!-- SLOT: for what --></div>
+    </article>
+
+    <!-- BLOCK: no path. When no recipe exists today, say so; that is the finding. -->
+    <article class="sub req" data-name="SLOT pill label" data-perspective="integrators" data-req="none" data-slug="int-SLOT-nopath">
+      <div class="req-head"><h2>If <!-- SLOT --> wants <!-- SLOT -->, then:</h2><span class="ids"><span class="ticket none">no ticket</span><span class="slug">int-SLOT-nopath</span></span></div>
+      <p class="nopath"><!-- SLOT: what blocks it --></p>
+      <div class="involve"><span>Involve</span><span class="team"><!-- SLOT --></span></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ TENSIONS: decisions, not tickets; about three per sub-tab ============ -->
+<section class="panel" data-t="tensions" role="tabpanel" aria-labelledby="tab-tensions">
+  <div class="subnav"><button class="step prev" aria-label="Previous">‹</button><div class="pills" role="tablist"></div><button class="step next" aria-label="Next">›</button><span class="pos"></span></div>
+  <div class="stack subs">
+    <div class="sub on" data-name="SLOT group label">
+      <div class="tgrid">
+        <!-- BLOCK: tension. The decider is a named person or team, from a roster source; a role when no name is sourced. -->
+        <article class="tension" data-tension="SLOT-slug">
+          <h3><!-- SLOT: "X vs Y" --></h3>
+          <div class="side"><span><!-- SLOT: perspective A --></span><p><!-- SLOT --></p></div>
+          <div class="vs">VS</div>
+          <div class="side"><span><!-- SLOT: perspective B --></span><p><!-- SLOT --></p></div>
+          <p class="decide"><!-- SLOT: the question --></p>
+          <p class="decider"><!-- SLOT --></p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROPOSED TICKETS: what would give every no-ticket requirement a key; none filed without a yes ============ -->
+<section class="panel" data-t="tickets" role="tabpanel" aria-labelledby="tab-tickets">
+  <div class="subnav"><button class="step prev" aria-label="Previous">‹</button><div class="pills" role="tablist"></div><button class="step next" aria-label="Next">›</button><span class="pos"></span></div>
+  <div class="stack subs">
+    <div class="sub on" data-name="Tickets">
+      <div class="lead"><h2><!-- SLOT: "N tickets under <feature ticket> would give every requirement on this page a ticket" --></h2><p class="actor">None are filed until approved.</p></div>
+      <div class="scroll"><table class="t">
+        <tr><th>Proposed ticket</th><th>Breaks into</th><th>Covers</th></tr>
+        <tr data-proposed="SLOT-slug"><td><!-- SLOT --></td><td><!-- SLOT --></td><td class="mono"><!-- SLOT: requirement slugs --></td></tr>
+      </table></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div>
+    <h1><!-- SLOT: title, "<feature> should <end goal> for <deployables it serves>" --></h1>
+    <p class="subtitle"><!-- SLOT: the feature's ticket or doc link, and one line of context --></p>
+  </div>
+  <div class="status">
+    <p><!-- SLOT: what the default branch looks like today, and which parts of the page are predictions --></p>
+    <p class="ask"><!-- SLOT: the ask --></p>
+    <p class="srcs"><!-- SLOT: sources with spelled-out dates --></p>
+  </div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var tabs = [].slice.call(document.querySelectorAll("button.tab"));
+  var panels = [].slice.call(document.querySelectorAll("#panels > .panel"));
+
+  function setOn(list, i) {
+    list.forEach(function (el, j) {
+      var on = j === i;
+      el.classList.toggle("on", on);
+      if (on) el.removeAttribute("inert"); else el.setAttribute("inert", "");
+    });
+  }
+
+  // Build each panel's sub-tab row from its .sub children.
+  panels.forEach(function (panel) {
+    var subs = [].slice.call(panel.querySelectorAll(":scope > .subs > .sub"));
+    var pills = panel.querySelector(".pills");
+    var pos = panel.querySelector(".pos");
+    panel._i = 0;
+    subs.forEach(function (sub, i) {
+      var b = document.createElement("button");
+      b.className = "pill";
+      b.setAttribute("role", "tab");
+      b.textContent = sub.getAttribute("data-name");
+      if (i < 9) { var k = document.createElement("kbd"); k.className = "k"; k.textContent = "⌥" + (i + 1); b.appendChild(k); }
+      b.addEventListener("click", function () { show(i); });
+      pills.appendChild(b);
+    });
+    var buttons = [].slice.call(pills.children);
+    function show(i) {
+      var n = subs.length;
+      i = ((i % n) + n) % n;
+      panel._i = i;
+      setOn(subs, i);
+      buttons.forEach(function (b, j) { b.setAttribute("aria-selected", j === i ? "true" : "false"); });
+      pos.textContent = (i + 1) + " of " + n;
+    }
+    panel._show = show;
+    panel._n = subs.length;
+    panel.querySelector(".prev").addEventListener("click", function () { show(panel._i - 1); });
+    panel.querySelector(".next").addEventListener("click", function () { show(panel._i + 1); });
+    if (subs.length < 2) { panel.querySelector(".prev").hidden = true; panel.querySelector(".next").hidden = true; }
+    show(0);
+  });
+
+  var cur = 0;
+  function selectTab(i) {
+    cur = i;
+    tabs.forEach(function (t, j) { t.setAttribute("aria-selected", j === i ? "true" : "false"); });
+    setOn(panels, i);
+  }
+  tabs.forEach(function (t, i) { t.addEventListener("click", function () { selectTab(i); }); });
+
+  // Count of no-ticket requirements on each tab, as a badge.
+  panels.forEach(function (p, i) {
+    var n = p.querySelectorAll('[data-req="none"]').length;
+    if (n) { var s = document.createElement("span"); s.className = "count"; s.textContent = n + " no ticket"; tabs[i].insertBefore(s, tabs[i].querySelector("kbd")); }
+  });
+
+  // Keys: 1-6 tabs, Option/Alt+digit sub-tabs, ←/→ step sub-tabs.
+  document.addEventListener("keydown", function (e) {
+    if (e.target.closest && e.target.closest("input, textarea, select, [contenteditable]")) return;
+    if (e.metaKey || e.ctrlKey) return;
+    var d = /^Digit([1-9])$/.exec(e.code);
+    if (d) {
+      var n = +d[1] - 1;
+      if (e.altKey) { var p = panels[cur]; if (n < p._n) { p._show(n); e.preventDefault(); } }
+      else if (n < tabs.length) { selectTab(n); e.preventDefault(); }
+      return;
+    }
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+      if (e.target.closest && e.target.closest(".scroll")) return;
+      panels[cur]._show(panels[cur]._i + (e.key === "ArrowRight" ? 1 : -1));
+      e.preventDefault();
+    }
+  });
+
+  // Bare #token opens a tab.
+  var h = (location.hash || "").slice(1);
+  var at = tabs.findIndex(function (t) { return t.getAttribute("data-t") === h; });
+  selectTab(at >= 0 ? at : 0);
+})();
+</script>
+</body>
+</html>
